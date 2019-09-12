@@ -97,3 +97,38 @@ namespace Lab2_three
         }
     }
 }
+using System;
+namespace Lab2_four
+{
+    class Program
+    {
+        public static void Main(string [] args)
+         {
+           
+                Console.WriteLine("Введите координаты точки А. x1 =");
+                int x1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("y1=");
+                int y1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Введите координаты точки B. x2 =");
+                int x2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("y2=");
+                int y2 = Convert.ToInt32(Console.ReadLine());
+            int side1 = (x2 - x1) * (x2 - x1);
+            double SIDE1 = Math.Sqrt(side1);
+            int side2 = (y2 - y1) * (y2 - y1);
+            double SIDE2 = Math.Sqrt(side2);
+            double PER = 2 * (SIDE1 + SIDE2);
+            double S = SIDE1 * SIDE2;
+            Console.WriteLine("S =");
+            Console.WriteLine(S);
+            Console.WriteLine("P=");
+            Console.WriteLine(PER);
+
+              
+                Console.ReadKey();
+
+            
+}
+    }
+}
