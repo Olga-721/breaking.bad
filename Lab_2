@@ -1,0 +1,23 @@
+using System;
+namespace laba2_one
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Введите координаты x1, y1, x2, y2:");
+            int x1 = Convert.ToInt32(Console.ReadLine());
+            int y1  = Convert.ToInt32(Console.ReadLine());
+            int x2 = Convert.ToInt32(Console.ReadLine());
+            int y2 = Convert.ToInt32(Console.ReadLine());
+            int x = x2 - x1;
+            int y = y2 - y1;
+            int qv = x * x + y * y;
+            double DLINA = Math.Sqrt(qv);
+            Console.WriteLine("Ваша длина равна:");
+            Console.WriteLine(DLINA);
+            Console.ReadKey ();
+
+        }
+    }
+}
