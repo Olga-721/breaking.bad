@@ -125,8 +125,50 @@ namespace Lab2_four
             Console.WriteLine("P=");
             Console.WriteLine(PER);
 
+           Console.ReadKey();
+           using System;
+namespace Lab2_five
+{
+    class Program
+    {
+        public static void Main(string [] args)
+         {
+           
+                Console.WriteLine("Введите координаты точки А. x1 =");
+                int x1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("y1=");
+                int y1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Введите координаты точки B. x2 =");
+                int x2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("y2=");
+                int y2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите координаты точки C. x3 =");
+            int x3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("y3=");
+            int y3 = Convert.ToInt32(Console.ReadLine());
+
+            int side1 = (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);
+            double SIDE1 = Math.Sqrt(side1);
+            int side2 = (y3 - y1) * (y3 - y1) + (x3 - x1) * (x3 - x1) ;
+            double SIDE2 = Math.Sqrt(side2);
+            int side3 = (x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2);
+            double SIDE3 = Math.Sqrt(side3);
+            double PER = SIDE1 + SIDE2 + SIDE3;
+            double p = (SIDE1 + SIDE2 + SIDE3)/3;
+            double S = Math.Sqrt(p * ((p - SIDE1) + (p - SIDE2) + (p - SIDE3)));
+            Console.WriteLine("S =");
+            Console.WriteLine(S);
+            Console.WriteLine("P=");
+            Console.WriteLine(PER);
+
               
                 Console.ReadKey();
+
+            
+}
+    }
+}
 
             
 }
