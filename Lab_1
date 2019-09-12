@@ -1,0 +1,125 @@
+using System;
+
+namespace Lab_one.one
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter first side:");
+            string side1 = Console.ReadLine();
+            int a = Convert.ToInt32(side1);
+            Console.WriteLine("Enter second side:");
+            string side2 = Console.ReadLine();
+            int b = Convert.ToInt32(side2);
+            int P = 2*a + 2*b;
+             Console.WriteLine("P=" + P);
+        int S = a * b;
+       
+        Console.WriteLine("S=" + S);
+            Console.ReadKey();
+        }
+    }
+}
+using System;
+
+namespace Lab_one.two
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter diam:");
+            string diam = Console.ReadLine();
+            int d = Convert.ToInt32(diam);
+            float PI = 3.14f;
+            int pi = Convert.ToInt32(PI);
+
+            
+            int L = pi * d;
+            Console.WriteLine("L=" + L);
+
+            
+            Console.ReadKey();
+        }
+    }
+}
+using System;
+
+namespace Lab_one.three
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter first num:");
+            string side1 = Console.ReadLine();
+            int a = Convert.ToInt32(side1);
+            Console.WriteLine("Enter second num:");
+            string side2 = Console.ReadLine();
+            int b = Convert.ToInt32(side2);
+            int Sr = (a+b)/2;
+            Console.WriteLine("Sr=" + Sr);
+            Console.ReadKey();
+        }
+    }
+}
+using System;
+
+namespace Lab_one.four
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter first num:");
+            string side1 = Console.ReadLine();
+            int a = Convert.ToInt32(side1);
+            Console.WriteLine("Enter second num:");
+            string side2 = Console.ReadLine();
+            int b = Convert.ToInt32(side2);
+            int sum = a*a + b*b;
+            Console.WriteLine("sum=" + sum);
+            int min = a * a - b * b;
+            Console.WriteLine("min=" + min);
+            int pr = a * a * b * b;
+            Console.WriteLine("pr=" + pr);
+            int del = (a * a) / (b*b);
+            Console.WriteLine("del=" + del);
+            Console.ReadKey();
+        }
+    }
+}
+using System;
+
+namespace Lab_one.five
+{
+    class Program
+    {
+        static void Main(string [] args)
+
+        { 
+            Console.WriteLine("Enter first num:");
+            string side1 = Console.ReadLine();
+            int a  = Convert.ToInt32(side1);
+            if (a < 0)
+                a = a - 2 * a;
+            else a = a;
+            Console.WriteLine("Enter second num:");
+            string side2 = Console.ReadLine();
+            int b = Convert.ToInt32(side2);
+            if (b < 0) b = b - 2 * b;
+            else b = b;
+           
+            int sum = a + b;
+            Console.WriteLine("sum=" + sum);
+            int min = a - b;
+            Console.WriteLine("min=" + min);
+            int pr = a * b;
+            Console.WriteLine("pr=" + pr);
+            int del = a / b;
+            Console.WriteLine("del=" + del);
+            Console.ReadKey();
+        }
+    }
+}
