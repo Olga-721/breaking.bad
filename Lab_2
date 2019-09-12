@@ -126,6 +126,11 @@ namespace Lab2_four
             Console.WriteLine(PER);
 
            Console.ReadKey();
+                       
+}
+    }
+}
+
            using System;
 namespace Lab2_five
 {
@@ -170,7 +175,3 @@ namespace Lab2_five
     }
 }
 
-            
-}
-    }
-}
