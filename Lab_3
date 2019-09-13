@@ -22,7 +22,7 @@ namespace Lab3_one
 }
 using System;
 
-namespace Lab3_one
+namespace Lab3_two
 {
     class Program
     {
@@ -40,6 +40,35 @@ namespace Lab3_one
             B = A;
             A = C;
             C = D;
+            Console.WriteLine("A=" + A + " " + "B=" + B + " " + "C=" + C);
+            Console.ReadKey();
+
+        }
+    }
+}
+using System;
+
+namespace Lab3_three
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите А");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите В");
+            int B = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите С");
+            int C = Convert.ToInt32(Console.ReadLine());
+
+            int D = 0;
+            D = B;
+             B = C;
+            C = A;
+            A = D;
+           
+           
+           
             Console.WriteLine("A=" + A + " " + "B=" + B + " " + "C=" + C);
             Console.ReadKey();
 
