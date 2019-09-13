@@ -94,7 +94,7 @@ namespace Lab3_four
 }
 using System;
 
-namespace Lab3_four
+namespace Lab3_five
 {
     class Program
     {
@@ -104,6 +104,44 @@ namespace Lab3_four
             int x = Convert.ToInt32(Console.ReadLine());
             double y = 4 * Math.Pow((x-3), 6) - 7 * Math.Pow((x-3), 2) + 2;
             Console.WriteLine("у=4(х-3)^6-7(x-3)^3+2=" + y);
+            Console.ReadKey();
+
+        }
+    }
+}
+using System;
+
+namespace Lab3_seven
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите A");
+            int A = Convert.ToInt32(Console.ReadLine());
+            double D = Math.Pow(A, 4);
+            D = D * D * 1 * 1;
+            Console.WriteLine("A=" + D);
+            
+            Console.ReadKey();
+
+        }
+    }
+}
+using System;
+
+namespace Lab3_four
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите A");
+            int A = Convert.ToInt32(Console.ReadLine());
+            double D = Math.Pow(A, 6);
+            double PR = D * D * A * A * A * 1;
+            Console.WriteLine("A=" + PR);
+            
             Console.ReadKey();
 
         }
