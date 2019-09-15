@@ -1,0 +1,139 @@
+using System;
+
+namespace Lab_4.one
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите угол в градусах, чтобы 0<a<180:");
+            double a = Convert.ToDouble(Console.ReadLine());
+            double b = a / 180;
+            Console.WriteLine("Ваш градус в фаренгейтах равен:" + "F=" + b + "pi");
+
+        }
+    }
+}
+using System;
+
+namespace Lab_4.two
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите угол в фаренгейтах в PI, чтобы 0<a<2PI:");
+            double a = Convert.ToDouble(Console.ReadLine());
+            double b = a * 180;
+            Console.WriteLine("Ваш градус в градусах равен:" + "С=" + b );
+
+        }
+    }
+}
+using System;
+
+namespace Lab_4.three
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите кол-во кг конфет:");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите стоимость конфет за данное кол-во кг:");
+            double b = Convert.ToDouble(Console.ReadLine());
+            double kg = b / a;
+            Console.WriteLine("Введите кол-во кг конфет, которые вы хотите посчитать:");
+            double y = Convert.ToDouble(Console.ReadLine());
+            double Y = y * kg;
+            Console.WriteLine("Один кг конфет стоит" + " " + kg + "kg" + " " + "Y кг данных конфет стоит" + + " " + Y + "kg");
+            Console.ReadKey();
+
+        }
+    }
+}
+using System;
+
+namespace Lab_4.four
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите скорость 1ой машины");
+            double V1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите скорость 2ой машины");
+            double V2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите время, в которое машины находились в пути");
+            double T = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите конечное расстояние между машинами");
+            double S = Convert.ToDouble(Console.ReadLine());
+            double s1 = T * (V1 + V2) + S;
+            Console.WriteLine("Расстояние между машинами через Т часов равно" + " " + s1);
+
+
+
+
+            Console.ReadKey();
+
+        }
+    }
+}
+using System;
+
+namespace Lab_4.five
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите первый коэффициент");
+            double A = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите второй коэффициент");
+            double B = Convert.ToDouble(Console.ReadLine());
+            double x = -B / A;
+            Console.WriteLine("A*x=B, где х = " + x);
+
+
+
+
+            Console.ReadKey();
+
+        }
+    }
+}
+using System;
+
+namespace Lab_4.six
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите А1");
+
+            int A1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите B1");
+            int B1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите А2");
+            int A2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите B2");
+            int B2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите C1");
+            int C1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите C2");
+            int C2 = Convert.ToInt32(Console.ReadLine());
+            
+            int x = (C1*B2 - C2*B1)/(A1*B2 - A2*B1);
+            int y = (A1*C2 - A2*C1)/ (A1*B2 - A2*B1);
+            Console.WriteLine("Решение системы:" + " " + "x=" + x + " " + "y=" + y);
+           
+
+
+
+
+            Console.ReadKey();
+
+        }
+    }
+}
