@@ -1,0 +1,17 @@
+using System;
+
+namespace Lab_6.one
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите количество секунд");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = a / 60;
+            int c = a - b * 60;
+            Console.WriteLine("Секунд после последней минуты" + " " + c);
+            Console.ReadKey();
+        }
+    }
+}
