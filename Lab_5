@@ -1,0 +1,87 @@
+using System;
+
+namespace Lab_5.one
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите количество байт");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int kol = a / 1024;
+            Console.WriteLine("Ваше количество байт в килобайтах равно" + " " + kol);
+            Console.ReadKey();
+        }
+    }
+}
+using System;
+
+namespace Lab_5.two
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите A > B");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите B");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int kol = a / b;
+            Console.WriteLine("А вмещается в В" + " " + kol + "раз");
+            Console.ReadKey();
+        }
+    }
+}
+using System;
+
+namespace Lab_5.three
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите A > B");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите B");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int kol = a / b;
+            float s = a - kol*b;
+            Console.WriteLine("Незанятая часть после В равна" + " " + s);
+            Console.ReadKey();
+        }
+    }
+}
+using System;
+
+namespace Lab_5.four
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите A");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = a / 10;
+            int c = a - b * 10;
+            Console.WriteLine("Ваше число равно" + " " + c + b);
+            Console.ReadKey();
+        }
+    }
+}
+using System;
+
+namespace Lab_5.five
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите трехзначное число");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = a / 100;
+            int c = a - b * 100;
+            Console.WriteLine("Ваше число равно" + " " + c + b);
+            Console.ReadKey();
+        }
+    }
+}
