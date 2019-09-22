@@ -129,3 +129,33 @@ namespace Lab8_five
         }
     }
 }
+using System;
+
+namespace Lab8_six
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите число");
+            int A = Convert.ToInt32(Console.ReadLine());
+            
+                int a = A % 2;
+            
+            if (a == 0)
+                Console.WriteLine("Число четное,");
+            else
+                Console.WriteLine("Число нечетное,");
+            if (A / 10 > 9)
+                Console.WriteLine("трехзначное");
+            else
+            if (A / 10 < 10 && A / 10 > 0)
+
+                Console.WriteLine("двузначное");
+            else
+                Console.WriteLine("однозначное");
+
+
+        }
+    }
+}
