@@ -1,0 +1,131 @@
+using System;
+
+namespace Lab8_one
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите А");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите В");
+            int B = Convert.ToInt32(Console.ReadLine());
+            if (A != B) {  if (A > B) { B = A;
+            Console.WriteLine("А и В равны соответственно" + " " + A +" " + B); }
+                   
+            else {  A = B;
+                Console.WriteLine("А и В равны соответственно" + " " + A + " " + B); }}
+               
+              
+            else
+                Console.WriteLine("А и В равны соответственно" + " " + A + " " + B);
+
+
+        }
+    }
+}
+using System;
+
+namespace Lab8_two
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите А");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите В");
+            int B = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите С");
+            int C = Convert.ToInt32(Console.ReadLine());
+            if (A > B && B > C)
+                Console.WriteLine(A + B);
+            if (A>B && B<C)
+                Console.WriteLine(A + C);
+            if (A<B && C>A)
+                Console.WriteLine(C + B);
+
+
+        }
+    }
+}
+using System;
+
+namespace Lab8_three
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите координаты x1, y1(A)");
+            int x1 = Convert.ToInt32(Console.ReadLine());
+            int y1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите координаты х2, у2(B)");
+            int x2 = Convert.ToInt32(Console.ReadLine());
+            int y2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите координаты х3, у3(C)");
+            int x3 = Convert.ToInt32(Console.ReadLine());
+            int y3 = Convert.ToInt32(Console.ReadLine());
+            int AB = Math.Abs((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+            int AC = Math.Abs((x3-x1)*(x3-x1) + (y3-y1)*(y3-y1));
+
+            if (AB > AC)
+                Console.WriteLine("Точка C ближе к А, АC=" + AC + " " + x3 + y3);
+            else Console.WriteLine("Точка В ближе к А, АВ=" + AB + " " + x2 + y2);
+
+        }
+    }
+}
+using System;
+
+namespace Lab8_four
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите координаты x1, y1(A)");
+            int x1 = Convert.ToInt32(Console.ReadLine());
+            int y1 = Convert.ToInt32(Console.ReadLine());
+            if (x1 > 0 && y1 > 0)
+                Console.WriteLine("Ваша точка расположена в 1ой четверти");
+            if (x1 < 0 && y1 > 0)
+                Console.WriteLine("Ваша точка расположена вo 2ой четверти");
+            if (x1 < 0 && y1 < 0)
+                Console.WriteLine("Ваша точка расположена в 3eй четверти");
+            if (x1 > 0 && y1 < 0)
+                Console.WriteLine("Ваша точка расположена в 4ой четверти");
+
+
+        }
+    }
+}
+using System;
+
+namespace Lab8_five
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите число");
+            int A = Convert.ToInt32(Console.ReadLine());
+            if (A < 0)
+                Console.WriteLine("Число отрицательное" + " ,");
+            else
+            {
+                if (A == 0)
+                    Console.WriteLine("Число нулевое, ");
+                else
+                    Console.WriteLine("Число положительное,");
+            }
+                int a = A % 2;
+            
+            if (a == 0)
+                Console.WriteLine("Число четное");
+            else
+                Console.WriteLine("Число нечетное");
+
+        }
+    }
+}
