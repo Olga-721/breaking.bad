@@ -15,3 +15,122 @@ namespace Lab_6.one
         }
     }
 }
+using System;
+
+namespace Lab6_two
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите число");
+            int den = Convert.ToInt32(Console.ReadLine());
+
+            int k;
+            switch (k = den % 7)
+            {
+
+                case 1:
+                    Console.WriteLine("Monday");
+                    break;
+                case 2:
+                    Console.WriteLine("Tuesday");
+                    break;
+                case 3:
+                    Console.WriteLine("Wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine("Thursday");
+                    break;
+                case 5:
+                    Console.WriteLine("Friday");
+                    break;
+                case 6:
+                    Console.WriteLine("Saturday");
+                    break;
+                case 7:
+                    Console.WriteLine("Sunday");
+                    break;
+            }
+        }
+    }
+}
+using System;
+
+namespace Lab6_three
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите число");
+            int den = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите номер дня недели в этом году 1 января, где 1 - понедельник, а 7 - воскресенье соответственно");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            int k;
+            switch (k = (den + N - 1) % 7)
+            {
+
+                case 1:
+                    Console.WriteLine("Monday");
+                    break;
+                case 2:
+                    Console.WriteLine("Tuesday");
+                    break;
+                case 3:
+                    Console.WriteLine("Wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine("Thursday");
+                    break;
+                case 5:
+                    Console.WriteLine("Friday");
+                    break;
+                case 6:
+                    Console.WriteLine("Saturday");
+                    break;
+                case 7:
+                    Console.WriteLine("Sunday");
+                    break;
+            }
+        }
+    }
+}
+using System;
+
+namespace Lab6_four
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите А");
+            int A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите В");
+            int B = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите С");
+            int C = Convert.ToInt32(Console.ReadLine());
+            int kol = A * B / C / C;
+            Console.WriteLine("Максимальное кол-во квадратов в прямоугольнике равно" + " " + kol);
+            Console.ReadKey();
+        }
+    }
+}
+using System;
+
+namespace Lab6_five
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите год");
+            int god = Convert.ToInt32(Console.ReadLine());
+            god = (god - 1) / 100 + 1;
+            Console.WriteLine("Вы живете в " + god + " веке");
+            Console.ReadKey();
+            
+        }
+    }
+}
