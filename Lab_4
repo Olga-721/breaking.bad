@@ -9,7 +9,7 @@ namespace Lab_4.one
             Console.WriteLine("Введите угол в градусах, чтобы 0<a<180:");
             double a = Convert.ToDouble(Console.ReadLine());
             double b = a / 180;
-            Console.WriteLine("Ваш градус в фаренгейтах равен:" + "F=" + b + "pi");
+            Console.WriteLine("Ваш градус в радианах равен:" + "F=" + b + "pi");
 
         }
     }
@@ -22,7 +22,7 @@ namespace Lab_4.two
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите угол в фаренгейтах в PI, чтобы 0<a<2PI:");
+            Console.WriteLine("Введите угол в радианах в PI, чтобы 0<a<2PI:");
             double a = Convert.ToDouble(Console.ReadLine());
             double b = a * 180;
             Console.WriteLine("Ваш градус в градусах равен:" + "С=" + b );
