@@ -119,8 +119,8 @@ namespace Lab3_seven
         {
             Console.WriteLine("Введите A");
             int A = Convert.ToInt32(Console.ReadLine());
-            double D = Math.Pow(A, 4);
-            D = D * D * 1 * 1;
+            double D = A*A*A;
+            D = D * D * A * A;
             Console.WriteLine("A=" + D);
             
             Console.ReadKey();
@@ -138,8 +138,9 @@ namespace Lab3_four
         {
             Console.WriteLine("Введите A");
             int A = Convert.ToInt32(Console.ReadLine());
-            double D = Math.Pow(A, 6);
-            double PR = D * D * A * A * A * 1;
+            double D = A*A*A;
+            double PR = D * D;
+            PR = PR * D * D * D;
             Console.WriteLine("A=" + PR);
             
             Console.ReadKey();
