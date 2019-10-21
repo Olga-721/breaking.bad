@@ -1,0 +1,177 @@
+using System;
+
+namespace nine.one
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите номер дня ");
+         
+            int day = Convert.ToInt32(Console.ReadLine());
+            int caseSwitch = day;
+            switch (caseSwitch)
+                {
+                case 1:
+            Console.WriteLine("первое");
+                break;
+            case 2:
+            Console.WriteLine("второе");
+                break;
+                Console.WriteLine(day);
+                case 3:
+                    Console.WriteLine("третье");
+                    break;
+                case 4:
+                    Console.WriteLine("четвертое");
+                    break;
+                    Console.WriteLine(day);
+                case 5:
+                    Console.WriteLine("пятое");
+                    break;
+                case 6:
+                    Console.WriteLine("шестое");
+                    break;
+                    Console.WriteLine(day);
+                case 7:
+                    Console.WriteLine("седьмое");
+                    break;
+                case 8:
+                    Console.WriteLine("восьмое");
+                    break;
+                    Console.WriteLine(day);
+                case 9:
+                    Console.WriteLine("девятое");
+                    break;
+                case 10:
+                    Console.WriteLine("десятое");
+                    break;
+                    Console.WriteLine(day);
+                case 11:
+                    Console.WriteLine("одиннадцатое");
+                    break;
+                case 12:
+                    Console.WriteLine("двенадцатое");
+                    break;
+                    Console.WriteLine(day);
+                case 13:
+                    Console.WriteLine("тринадцатое");
+                    break;
+                case 14:
+                    Console.WriteLine("четырнадцатое");
+                    break;
+                    Console.WriteLine(day);
+                case 15:
+                    Console.WriteLine("пятнадцатое");
+                    break;
+                case 16:
+                    Console.WriteLine("шестнадцатое");
+                    break;
+                    Console.WriteLine(day);
+                case 17:
+                    Console.WriteLine("семнадцатое");
+                    break;
+                case 18:
+                    Console.WriteLine("восемнадцатое");
+                    break;
+                    Console.WriteLine(day);
+                case 19:
+                    Console.WriteLine("девятнадцатое");
+                    break;
+                case 20:
+                    Console.WriteLine("двадцатое");
+                    break;
+                    Console.WriteLine(day);
+                case 21:
+                    Console.WriteLine("двадцать первое");
+                    break;
+                    Console.WriteLine(day);
+                case 22:
+                    Console.WriteLine("двадцать второе");
+                    break;
+                case 23:
+                    Console.WriteLine("двадцать третье");
+                    break;
+                    Console.WriteLine(day);
+                case 24:
+                    Console.WriteLine("двадцать четвертое");
+                    break;
+                case 25:
+                    Console.WriteLine("двадцать пятое");
+                    break;
+                    Console.WriteLine(day);
+                case 26:
+                    Console.WriteLine("двадцать шестое");
+                    break;
+                    Console.WriteLine(day);
+                case 27:
+                    Console.WriteLine("двадцать седьмое");
+                    break;
+                    Console.WriteLine(day);
+                case 28:
+                    Console.WriteLine("двадцать восьмое");
+                    break;
+                case 29:
+                    Console.WriteLine("двадцать девятое");
+                    break;
+                    Console.WriteLine(day);
+                case 30:
+                    Console.WriteLine("тридцатое");
+                    break;
+                case 31:
+                    Console.WriteLine("тридцать первое");
+                    break;
+                    Console.WriteLine(day);
+                default:
+                    Console.WriteLine("нет такого числа в месяце как бэ");
+                    break;
+            }
+            Console.WriteLine("Введите номер месяца ");
+            int mon = Convert.ToInt32(Console.ReadLine());
+            int caseSwitch2 = mon;
+            switch (mon)
+            {
+                case 1:
+                    Console.WriteLine(" января");
+                    break;
+                case 2:
+                    Console.WriteLine(" февраля");
+                    break;
+                case 3:
+                    Console.WriteLine(" марта");
+                    break;
+                case 4:
+                    Console.WriteLine(" апреля");
+                    break;
+                case 5:
+                    Console.WriteLine(" мая");
+                    break;
+                case 6:
+                    Console.WriteLine(" июня");
+                    break;
+                case 7:
+                    Console.WriteLine(" июля");
+                    break;
+                case 8:
+                    Console.WriteLine(" августа");
+                    break;
+                case 9:
+                    Console.WriteLine(" сентября");
+                    break;
+                case 10:
+                    Console.WriteLine(" октября");
+                    break;
+                case 11:
+                    Console.WriteLine(" ноября");
+                    break;
+                case 12:
+                    Console.WriteLine(" декабря");
+                    break;
+                default:
+
+                    Console.WriteLine("месяцев 12, а не 13, 14 и т.д.");
+                    break;
+            }
+        }
+    }
+}
