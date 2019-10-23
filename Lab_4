@@ -8,8 +8,8 @@ namespace Lab_4.one
         {
             Console.WriteLine("Введите угол в градусах, чтобы 0<a<180:");
             double a = Convert.ToDouble(Console.ReadLine());
-            double b = a / 180;
-            Console.WriteLine("Ваш градус в радианах равен:" + "F=" + b + "pi");
+            double b = a / 180 * 3,14;
+            Console.WriteLine("Ваш градус в радианах равен:" + "F=" + b);
 
         }
     }
@@ -24,7 +24,7 @@ namespace Lab_4.two
         {
             Console.WriteLine("Введите угол в радианах в PI, чтобы 0<a<2PI:");
             double a = Convert.ToDouble(Console.ReadLine());
-            double b = a * 180;
+            double b = a * 180 / 3,14;
             Console.WriteLine("Ваш градус в градусах равен:" + "С=" + b );
 
         }
