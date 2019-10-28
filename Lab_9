@@ -396,3 +396,135 @@ namespace nine.three
         }
     }
 }
+using System;
+
+namespace nine.four
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите число");
+            int n = Convert.ToInt32(Console.ReadLine());
+            switch (n / 100)
+            {
+                case 1:
+                    Console.WriteLine("сто");
+                   
+                    break;
+                case 2:
+                    Console.WriteLine("двести");
+                    break;
+                case 3:
+                    Console.WriteLine("триста");
+                    break;
+                case 4:
+                    Console.WriteLine("четыреста");
+                    break;
+                case 5:
+                    Console.WriteLine("пятьсот");
+                    break;
+                case 6:
+                    Console.WriteLine("шестьсот");
+                    break;
+                case 7:
+                    Console.WriteLine("семьсот");
+                    break;
+                case 8:
+                    Console.WriteLine("восемьсот");
+                    break;
+                case 9:
+                    Console.WriteLine("девятьсот");
+                    break;
+            }
+            switch (n % 100 - n % 10)
+            {
+                case 20:
+                    Console.WriteLine("двадцать");
+                    break;
+                case 30:
+                    Console.WriteLine("тридцать");
+                    break;
+                case 40:
+                    Console.WriteLine("сорок");
+                    break;
+                case 50:
+                    Console.WriteLine("пятьдесят");
+                    break;
+                case 60:
+                    Console.WriteLine("шестьдесят");
+                    break;
+                case 70:
+                    Console.WriteLine("семьдесят");
+                    break;
+                case 80:
+                    Console.WriteLine("восемьдесят");
+                    break;
+                case 90:
+                    Console.WriteLine("девяносто");
+                    break;
+
+            }
+            switch (n%100)
+            {
+                case 11:
+                    Console.WriteLine("одиннадцать");
+                    break;
+                case 12:
+                    Console.WriteLine("двенадцать");
+                    break;
+                case 13:
+                    Console.WriteLine("тринадцать");
+                    break;
+                case 14:
+                    Console.WriteLine("четырнадцать");
+                    break;
+                case 15:
+                    Console.WriteLine("пятнадцать");
+                    break;
+                case 16:
+                    Console.WriteLine("шестнадцать");
+                    break;
+                case 17:
+                    Console.WriteLine("семнадцать");
+                    break;
+                case 18:
+                    Console.WriteLine("восемнадцать");
+                    break;
+                case 19:
+                    Console.WriteLine("девятнадцать");
+                    break;
+            }
+            switch (n%10)
+            {
+                case 1:
+                    Console.WriteLine("один");
+                    break;
+                case 2:
+                    Console.WriteLine("два");
+                    break;
+                case 3:
+                    Console.WriteLine("три");
+                    break;
+                case 4:
+                    Console.WriteLine("четыре");
+                    break;
+                case 5:
+                    Console.WriteLine("пять");
+                    break;
+                case 6:
+                    Console.WriteLine("шесть");
+                    break;
+                case 7:
+                    Console.WriteLine("семь");
+                    break;
+                case 8:
+                    Console.WriteLine("восемь");
+                    break;
+                case 9:
+                    Console.WriteLine("девять");
+                    break;
+            }
+        }
+    }
+}
