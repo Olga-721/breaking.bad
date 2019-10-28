@@ -1,0 +1,113 @@
+using System;
+
+namespace ten.one
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите стоимость килограмма конфет");
+            double kg = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("стоимость за 0.1 кг =" + kg * 0.1 + " за 0.2 кг =" + kg * 0.2 + " за 0.3 кг =" + kg * 0.3 + " за 0.4 кг =" + kg * 0.4 + " за 0.5 кг =" + kg * 0.5 + " за 0.6 кг =" + kg * 0.6 + " за 0.7 кг =" + kg * 0.7 + " за 0.8 кг =" + kg * 0.8 + " за 0.9 кг =" + kg * 0.9 + " за 1 кг =" + kg);
+        }
+    }
+}
+            
+using System;
+
+namespace ten.two
+{
+    class Program
+    {
+        static void Main(string[] args)
+        { int i;
+            double pr, ten;
+            ten = 1;
+            pr = 1;
+            Console.WriteLine("Введите число");
+            int N = Convert.ToInt32(Console.ReadLine());
+            for (i=1; N - i >= 0; i++)
+            {
+                ten = ten + 0,1;
+                pr = pr * ten;
+            }
+
+            Console.WriteLine("произведение равно" + pr);
+        }
+    }
+}
+            using System;
+
+namespace ten.three
+{
+    class Program
+    {
+        static void Main(string[] args)
+        { int i;
+            double pr, ten;
+            ten = 1;
+            pr = 1;
+            Console.WriteLine("Введите число");
+            int N = Convert.ToInt32(Console.ReadLine());
+            for (i=1; N - i >= 0; i++)
+            {
+               
+                pr = pr * ten;
+                ten = ten + 2;
+                Console.WriteLine("сумма равна" + pr);
+            }
+
+           
+        }
+    }
+    using System;
+
+namespace ten.four
+{
+    class Program
+    {
+        static void Main(string[] args)
+        { int i;
+            double pr, ten;
+            ten = 0;
+            pr = 1;
+            Console.WriteLine("Введите число");
+            int N = Convert.ToInt32(Console.ReadLine());
+            for (i=1; N - i >= 0; i++)
+            {
+               
+                pr = pr * Math.Pow(N, ten);
+                ten = ten + 1;
+               
+            }
+
+            Console.WriteLine("сумма равна" + pr);
+        }
+    }
+}
+using System;
+
+namespace ten.five
+{
+    class Program
+    {
+        static void Main(string[] args)
+        { int i;
+            double pr, ten;
+            ten = 0;
+            pr = 1;
+            Console.WriteLine("Введите число");
+            int N = Convert.ToInt32(Console.ReadLine());
+            for (i=1; N - i >= 0; i++)
+            {
+               
+                pr = pr * Math.Pow(-N, ten);
+                ten = ten + 1;
+               
+            }
+
+            Console.WriteLine("сумма равна" + pr);
+        }
+    }
+}
+            
