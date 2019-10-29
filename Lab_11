@@ -1,0 +1,127 @@
+using System;
+
+namespace eleven.one
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i;
+            Console.WriteLine("Введите А и В ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            while (a<=b)
+            {
+                for (i=0; a>i; i++)
+                {
+                    Console.WriteLine(a);
+                }
+                a++; 
+            }
+        }
+    }
+}
+using System;
+
+namespace eleven.two
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i;
+            Console.WriteLine("Введите А и В ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            while (a>b)
+            {
+                a = a - b;
+
+             
+            }
+            Console.WriteLine("Ваше число " + (b - a));
+        }
+    }
+}
+using System;
+
+namespace eleven.three
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, sum;
+            sum = 0;
+            Console.WriteLine("Введите N ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            for (i=0; n >= i; i++ )
+            {
+                if (sum >= n)
+ Console.WriteLine("Ваша сумма " + sum + ", ваше К = " + (n - 1) );
+                sum = sum + 1;
+            }
+
+           
+        }
+    }
+}
+using System;
+
+namespace eleven.four
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double i, mon, s;
+            i = 0;
+            s = 1000;
+         
+            Console.WriteLine("Введите % ");
+            double pr = Convert.ToInt32(Console.ReadLine());
+            mon = 10 * pr;
+           while (s < 1100)
+            {
+                s = s + mon;
+                mon = s * 0.01 * pr;
+          i++;
+            }
+
+
+            Console.WriteLine("кол-во месяцев равно " + i + ", итоговый размер вклада составляет " + s);
+        }
+    }
+}
+using System;
+
+namespace eleven.five
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, nod;
+            Console.WriteLine("Введите числа А и В");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            while (a != b)
+            {
+                if (a > b)
+                {
+a = a - b;
+             
+                }
+                    
+                else
+                {
+ b = b - a;
+   
+                }
+                   
+            }
+            Console.WriteLine("nod = " + a);
+               
+        }
+    }
+}
