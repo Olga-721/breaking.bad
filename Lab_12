@@ -53,3 +53,28 @@ namespace twelwe.two
             Console.WriteLine("ваше значение выражения равно " + (z + x));
 
     }}}
+    using System;
+namespace twelwe.two
+{
+    class Program
+    {
+        static void Main(string [] args)
+           
+        {
+            float r1, r2, s1, s2, pl;
+            Console.WriteLine("Введите R1 и R2 так, чтобы R1 > R2 ");
+            float pi = 3.14f;
+            r1 = Convert.ToInt32(Console.ReadLine());
+            r2 = Convert.ToInt32(Console.ReadLine());
+            s1 = pi * r1 * r1;
+            s2 = pi * r2 * r2;
+            pl = s1 - s2;
+
+
+           
+
+        }
+
+    }
+}
+
