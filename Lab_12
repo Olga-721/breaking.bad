@@ -54,27 +54,79 @@ namespace twelwe.two
 
     }}}
     using System;
-namespace twelwe.two
+
+namespace twelwe.three
 {
     class Program
     {
-        static void Main(string [] args)
-           
+        static void Main(string[] args)
         {
-            float r1, r2, s1, s2, pl;
-            Console.WriteLine("Введите R1 и R2 так, чтобы R1 > R2 ");
+            float r1, r2, s1, s2, pl, a;
+            for (a=0; a<=2; a++)
+            {
+Console.WriteLine("Введите R1 и R2 так, чтобы R1 > R2 ");
             float pi = 3.14f;
             r1 = Convert.ToInt32(Console.ReadLine());
             r2 = Convert.ToInt32(Console.ReadLine());
             s1 = pi * r1 * r1;
             s2 = pi * r2 * r2;
             pl = s1 - s2;
+                Console.WriteLine("Vashe chislo ravno " + pl);
 
+            }
+            
 
+        }
+    }
+}
+using System;
+
+namespace twelwe.four
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double x, y, a;
+            for (a=0; a<=2; a++)
+            {
+                Console.WriteLine("Vvedite vashe x");
+                x = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Vvedite vashe y");
+                y = Convert.ToDouble(Console.ReadLine());
+                if ((x > 0) & (y > 0))
+                {
+                    Console.WriteLine("Vasha koordinata nahoditsya v 1oy chetverti");
+
+                }
+
+                if ((x < 0) & (y > 0))
+                {
+                    Console.WriteLine("Vasha koordinata nahoditsya vo 2oy chetverti");
+
+                }
+                if ((x < 0) & (y < 0))
+                {
+                    Console.WriteLine("Vasha koordinata nahoditsya v 3ey chetverti");
+
+                }
+                if ((x > 0) & (y < 0))
+                {
+                    Console.WriteLine("Vasha koordinata nahoditsya v 4oy chetverti");
+
+                }
+            }
            
+
+
+
+
+
+
 
         }
 
-    }
-}
 
+    }
+    
+}
