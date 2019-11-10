@@ -1,99 +1,160 @@
+
 using System;
+
 namespace twelwe.one
 {
     class Program
     {
-        static void Main(string [] args)
-           
+        public static void PowerA3(float a, float b)
         {
-            float n, b, i;
-            for (i=0; 5 > i; i++)
+
+
+
+
+            float i;
+            for (i = 0; 5 > i; i++)
             {
-            Console.WriteLine("Введите число А ");
-            float  a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Введите число А ");
+                a = Convert.ToInt32(Console.ReadLine());
                 b = a * a * a;
                 Console.WriteLine("Ваше число в 3ей степени " + b);
 
             }
-
         }
+    
+
+
+
+        static void Main(string[] args)
+        {
+            float a, b;
+            a = 0; b = 0;
+           
+            PowerA3(a, b);
+}
+
     }
 }
+
 using System;
+
 namespace twelwe.two
 {
     class Program
     {
-        static void Main(string [] args)
-           
+        public static void Sign(float a, float b)
         {
-            float x, a, b, z;
-            a = Convert.ToInt32(Console.ReadLine());
-            b = Convert.ToInt32(Console.ReadLine());
-            if (a < 0)
-                x = - 1;
-            else
-            {
-                if (a > 0)
-                    x = 1;
+
+
+
+       
+       
+                float x, z;
+                a = Convert.ToInt32(Console.ReadLine());
+                b = Convert.ToInt32(Console.ReadLine());
+                if (a < 0)
+                    x = -1;
                 else
-                    x = 0;
+                {
+                    if (a > 0)
+                        x = 1;
+                    else
+                        x = 0;
+
+                }
+                if (b < 0)
+                    z = -1;
+                else
+                {
+                    if (b > 0)
+                        z = 1;
+                    else
+                        z = 0;
+
+                }
+                Console.WriteLine("ваше значение выражения равно " + (z + x));
 
             }
-            if (b < 0)
-                z = - 1;
-            else
-            {
-                if (b > 0)
-                    z = 1;
-                else
-                    z = 0;
+        
+    
 
-            }
-            Console.WriteLine("ваше значение выражения равно " + (z + x));
 
-    }}}
-    using System;
+
+        static void Main(string[] args)
+        {
+            float a, b;
+            a = 0; b = 0;
+           
+            Sign(a, b);
+
+        }
+
+
+
+
+
+
+    }
+}
+
+
+   
+using System;
 
 namespace twelwe.three
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void RingS(float r1, float r2)
         {
-            float r1, r2, s1, s2, pl, a;
-            for (a=0; a<=2; a++)
+
+
+
+            float s1, s2, pl, a;
+            for (a = 0; a <= 2; a++)
             {
-Console.WriteLine("Введите R1 и R2 так, чтобы R1 > R2 ");
-            float pi = 3.14f;
-            r1 = Convert.ToInt32(Console.ReadLine());
-            r2 = Convert.ToInt32(Console.ReadLine());
-            s1 = pi * r1 * r1;
-            s2 = pi * r2 * r2;
-            pl = s1 - s2;
+                Console.WriteLine("Введите R1 и R2 так, чтобы R1 > R2 ");
+                float pi = 3.14f;
+                r1 = Convert.ToInt32(Console.ReadLine());
+                r2 = Convert.ToInt32(Console.ReadLine());
+                s1 = pi * r1 * r1;
+                s2 = pi * r2 * r2;
+                pl = s1 - s2;
                 Console.WriteLine("Vashe chislo ravno " + pl);
 
             }
-            
+
 
         }
+
+
+
+        static void Main(string[] args)
+        {
+            float r1, r2;
+            r1 = 0; r2 = 0;
+           
+            RingS(r1, r2);
+
+        }
+
+
+
+
+
+
     }
 }
+
 using System;
 
 namespace twelwe.four
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Quarter(double x,double y)
         {
-            double x, y, a;
-            for (a=0; a<=2; a++)
-            {
-                Console.WriteLine("Vvedite vashe x");
-                x = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Vvedite vashe y");
-                y = Convert.ToDouble(Console.ReadLine());
+            
                 if ((x > 0) & (y > 0))
                 {
                     Console.WriteLine("Vasha koordinata nahoditsya v 1oy chetverti");
@@ -115,24 +176,37 @@ namespace twelwe.four
                     Console.WriteLine("Vasha koordinata nahoditsya v 4oy chetverti");
 
                 }
-            }
-           
-
         }
 
+ static void Main(string[] args)
+    {
+        double x, y, a;
+        for (a = 0; a <= 2; a++)
+        {
+
+            Console.WriteLine("Vvedite vashe x");
+            x = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Vvedite vashe y");
+            y = Convert.ToDouble(Console.ReadLine());
+            Quarter(x, y);
+        }
+    }
+        
 
     }
-    
-}
+   
+            
+
+    }
+
 using System;
 
 namespace twelwe.five
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            double f, y;
+       public static void Fact2(int f, int y)
+       {
             y = 1;
             f = 1;
           
@@ -145,7 +219,9 @@ namespace twelwe.five
                 for (f = 0; N - f >= 0; f = f + 2)
                 {
                     y = y * f;
+                 
                 }
+           
             }
             if ((v < 2) & (v > 0))
             {
@@ -165,6 +241,14 @@ namespace twelwe.five
 
 
 
+        }
+        static void Main(string [] args)
+        {
+           int f = 1;
+            int y = 1;
+
+            Fact2(f, y);
+      
         }
 
 
