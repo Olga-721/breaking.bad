@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+
+namespace thirteen.one
+{
+    class Program
+    {
+        static void Main(string[] args)
+        { int i, n;
+            i = -1;
+            n = 0;
+            Console.WriteLine("Введите длину массива N");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[N];
+            while (N>0)
+            {
+    
+                i = i + 2; ;
+             
+               array[n] = i;
+                Console.WriteLine(array[n]);
+                n++;
+                N--;
+   
+            }
+
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+
+namespace thirteen.two
+{
+    class Program
+    {
+        static void Main(string[] args)
+        { int  n;
+            double i;
+            i = 0;
+            n = 0;
+            Console.WriteLine("Введите длину массива N");
+            int N = Convert.ToInt32(Console.ReadLine());
+            double A = Convert.ToInt32(Console.ReadLine());
+            double D = Convert.ToInt32(Console.ReadLine());
+
+            double[] array = new double[N];
+            while (N>1)
+            {
+
+    
+           
+             
+               array[n] = A * Math.Pow(D, i);
+                Console.WriteLine(array[n]);
+                n++;
+                N--;
+                i++;
+   
+            }
+
+        }
+    }
+}
