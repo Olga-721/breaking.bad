@@ -62,3 +62,39 @@ namespace thirteen.two
         }
     }
 }
+using System;
+
+using System.Collections.Generic;
+namespace ConsoleApp12
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите размер массива ");
+            int N,  i, n;
+            double c, A, B;
+            c = 0;
+            N = Convert.ToInt32(Console.ReadLine());
+            double [] array = new double[N];
+            array[0] = A = Convert.ToDouble(Console.ReadLine());
+            array[1] = B = Convert.ToDouble(Console.ReadLine());
+            n = 2;
+            Console.WriteLine(array[0] + " " + array[1])  ;
+            while (N>n)
+            {
+                for (i = 2; n > i; i++)
+                {  c++;
+                    array[n] = c * (A+B);
+
+                   
+                   }
+                Console.WriteLine(array[n]);
+                n++;
+                c = 0;
+               
+            }
+           
+        }
+    }
+}
