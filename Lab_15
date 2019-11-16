@@ -1,0 +1,78 @@
+using System;
+
+    namespace fifteen.one
+{
+    class Program
+    {
+        static void Main(string [] args)
+        { int i;
+            i = 0;
+            Console.WriteLine("Enter the length of the array A");
+            int NA = Convert.ToInt32(Console.ReadLine());
+            int[] A = new int[NA];
+           
+            for (i=0; NA > i; i++)
+            {
+                A[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("Enter the length of the array B");
+            int NB = Convert.ToInt32(Console.ReadLine());
+            int[] B = new int[NB];
+            int[] C = new int[NA];
+            for (i = 0; NB > i; i++)
+            {
+                B[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            for (i = 0; NA > i; i++)
+            {
+                C[i] = A[i];
+                A[i] = B[i];
+                Console.WriteLine("Vash massiv " + "A[" + i + "] = " +A[i]);
+            }
+            for (i = 0; NB > i; i++)
+            {
+                B[i] = C[i];
+                Console.WriteLine("Vash massiv " + "B[" + i + "] = " + B[i]);
+            }
+
+        }
+    }
+}
+using System;
+
+    namespace fifteen.two
+{
+    class Program
+    {
+        static void Main(string [] args)
+        { int i, R, s, sr, n;
+            i = R = s = 0;
+            n = 1;
+            Console.WriteLine("Enter length of the array A");
+            int NA = Convert.ToInt32(Console.ReadLine());
+            int[] A = new int[NA];
+           
+            for (i=0; NA > i; i++)
+            {
+                A[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            int[] B = new int[NA];
+            B[0] = (A[0] + A[1]) / 2;
+            Console.WriteLine("B[0] = " + B[0]);
+            for (i=1; NA > i; i++)
+            {
+                for (i=1; n >= i; i++)
+                {
+                    R = A[i] + R;
+                s++;
+                }
+                sr = R / s;
+                B[n] = sr;
+                Console.WriteLine("B[" + n + "] = " + B[n]);
+                n++;
+            }
+               
+           
+        }
+    }
+}
