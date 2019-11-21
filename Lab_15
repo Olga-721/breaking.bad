@@ -40,39 +40,206 @@ using System;
 }
 using System;
 
-    namespace fifteen.two
+namespace fifteen.two
 {
     class Program
     {
-        static void Main(string [] args)
-        { int i, R, s, sr, n;
-            i = R = s = 0;
-            n = 1;
+        static void Main(string[] args)
+        {
+            double R;
+            int i;
+          
             Console.WriteLine("Enter length of the array A");
-            int NA = Convert.ToInt32(Console.ReadLine());
-            int[] A = new int[NA];
+           int NA = Convert.ToInt32(Console.ReadLine());
+            double[] A = new double[NA];
            
-            for (i=0; NA > i; i++)
+
+            for (i = 0; NA > i; i++)
             {
                 A[i] = Convert.ToInt32(Console.ReadLine());
             }
-            int[] B = new int[NA];
+            R = A[1];
+            double[] B = new double[NA];
             B[0] = (A[0] + A[1]) / 2;
+            B[1] = A[1];
             Console.WriteLine("B[0] = " + B[0]);
-            for (i=1; NA > i; i++)
-            {
-                for (i=1; n >= i; i++)
-                {
+            Console.WriteLine("B[1] = " + B[1]);
+            for (i = 2; NA > i; i++)
+            {       
+              
                     R = A[i] + R;
-                s++;
-                }
-                sr = R / s;
-                B[n] = sr;
-                Console.WriteLine("B[" + n + "] = " + B[n]);
-                n++;
-            }
+                    B[i] = R/i;
+                    Console.WriteLine("B[" + i + "] = " + B[i]);
+                
+            
                
-           
+   
+
+            }
+
+
         }
+    }
+}
+using System;
+
+namespace fifteen.three
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, n;
+            n = 0;
+            Console.WriteLine("Vvedite razmer massiva");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] A = new int[N];
+            for (i = 0; N > i; i++)
+            {
+                A[i] = Convert.ToInt32(Console.ReadLine());
+                if (A[i] % 2 != 0)
+                    n = A[i];
+
+            }
+            if (n == 0)
+            {
+                Console.WriteLine("Massiv ne imeet nechetnih chisel. Sam massiv: ");
+                for (i=0; N > i; i++)
+                
+                    Console.Write((i + 1) + " element > " + A[i] + " ;");
+                
+            }
+            else
+            {
+               for (i=0; N > i; i++)
+                
+                    if (A[i]%2 != 0)
+                    {
+                        A[i] = A[i] + n;
+                        Console.WriteLine("Massiv imeet nechetnie chisla. Izmenenniy massiv: " + A[i]);
+
+                    }
+               else
+                        Console.WriteLine("Massiv imeet nechetnie chisla. Izmenenniy massiv: " + A[i]);
+
+
+            }
+
+
+        }
+    }
+}
+using System;
+
+namespace fifteen.four
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, min, max, vis, nis;
+            min = vis = nis = 0;
+            
+            Console.WriteLine("Vvedite razmer massiva");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] A = new int[N];
+            max = N;
+            for (i = 0; N > i; i++)
+            {
+                A[i] = Convert.ToInt32(Console.ReadLine());
+                if (A[i] > min)
+                {
+                    min = A[i];
+                    vis = i;
+
+                }
+                   
+                if (A[i] < max)
+                {
+                    max = A[i];
+                    nis = i;
+
+                }
+                 
+
+            }
+            if (vis>nis)
+            {
+                for (i = 0; i <= nis; i++)
+                    Console.WriteLine(A[i]);
+                while (nis < vis-1)
+                {
+                    nis++;
+                    A[nis] = 0;
+
+
+                    Console.WriteLine(A[nis]);
+              
+                }
+                while (vis < N)
+                {
+                    Console.WriteLine(A[vis]);
+                    vis++;
+                }
+            }
+            else
+            {
+                for (i = 0; i <= vis; i++)
+                    Console.WriteLine(A[i]);
+                while (vis < nis-1)
+                {
+                    A[vis + 1] = 0;
+
+
+                    Console.WriteLine(A[vis + 1]);
+                    vis++;
+                }
+                while (nis < N)
+                {
+                    Console.WriteLine(A[nis]);
+                    nis++;
+                }
+            }
+        }
+    }
+}
+using System;
+
+namespace fifteen.five
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, min, n;
+            min = n = 0;
+
+            Console.WriteLine("Vvedite razmer massiva");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] A = new int[N];
+
+            for (i = 0; N > i; i++)
+            {
+                A[i] = Convert.ToInt32(Console.ReadLine());
+                for (min = i + 1; min < N; min++)
+                {
+                    if (A[i] > A[min])
+                    {
+                        n = A[i];
+                        A[i] = A[min];
+                        A[min] = n;
+
+                    }
+                }
+            
+            }
+            for (i = 0; i < N; i++)
+                Console.WriteLine(A[i]);
+
+        }
+
+
+
+        
     }
 }
