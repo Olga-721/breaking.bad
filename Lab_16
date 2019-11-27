@@ -35,3 +35,35 @@ Console.ReadKey();
 }
 }
 }
+using System;
+namespace sixteen.two
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int N, i, s, r;
+            s = 1;
+            r = 0;
+            N= Convert.ToInt32(Console.ReadLine());
+            int[] a = new int[N];
+            for (i = 0; i < N; i++)
+            {
+  a[i] = Convert.ToInt32(Console.ReadLine());
+              
+            }
+            for (i=0; i < N; i++)
+            {
+                if (a[i] == a[s])
+                    a[i]
+
+            }
+
+
+
+            for (i = 0; i < N; i++)
+                Console.WriteLine("a[" + i + "]=" + a[i]);
+            Console.ReadKey();
+        }
+    }
+}
