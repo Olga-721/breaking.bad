@@ -128,12 +128,12 @@ namespace thirteen.four
                 N = s;
                
                
-            for (B = 0; B <= N; B++)
+            for (B = 1; B <= N; B++)
             {
                 B--;
-                i = N - B - 1; A++;
+                i = N - B - 1;
                 Console.WriteLine("Vash massiv " + array[A] + array[i]);
-                B++;
+                B++; A++;
             }
 
 
