@@ -111,9 +111,10 @@ namespace thirteen.four
             int A, B, muss, i, n, s;
             A = 0;
             n = 0;
-            s = N
-            Console.WriteLine("Введите размер массива ");
+             Console.WriteLine("Введите размер массива ");
             int N = Convert.ToInt32(Console.ReadLine());
+            s = N;
+           
             int[] array = new int[N];
            
              while (N>0)
@@ -127,10 +128,10 @@ namespace thirteen.four
                 N = s;
                
                
-            for (B = 0; B < N; B++)
+            for (B = 0; B <= N; B++)
             {
                 B--;
-                i = N - B; A++;
+                i = N - B - 1; A++;
                 Console.WriteLine("Vash massiv " + array[A] + array[i]);
                 B++;
             }
