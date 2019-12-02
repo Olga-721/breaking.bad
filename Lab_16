@@ -42,28 +42,122 @@ namespace sixteen.two
     {
         static void Main(string[] args)
         {
-            int N, i, s, r;
-            s = 1;
-            r = 0;
-            N= Convert.ToInt32(Console.ReadLine());
+            int N, i, el, sum, j, sc, zap;
+            sum = j = sc = zap = 0;
+            el = 0;
+            N = Convert.ToInt32(Console.ReadLine());
             int[] a = new int[N];
             for (i = 0; i < N; i++)
             {
-  a[i] = Convert.ToInt32(Console.ReadLine());
-              
-            }
-            for (i=0; i < N; i++)
-            {
-                if (a[i] == a[s])
-                    a[i]
+                a[i] = Convert.ToInt32(Console.ReadLine());
+                
 
             }
-
-
-
             for (i = 0; i < N; i++)
-                Console.WriteLine("a[" + i + "]=" + a[i]);
-            Console.ReadKey();
+            {
+                sum = 0;
+                el++;
+               
+               for (el=1; el < N; el++)
+                {
+                    if (a[i] == a[el])
+                    { sum++;
+                        zap = el;
+                    }
+                    el++;
+                       
+                   
+                }
+            
+                if (sum == 1)
+                {
+                    for (j = 0; j < i - 1; j++)
+
+                        a[j] = a[j + 1];
+
+                    for (j = i - 1; j < zap - 1; j++)
+                        a[j] = a[j + 1];
+                    for (j = zap - 1; j < N - 2; j++)
+                    {
+  a[j] = a[zap + 1];
+                        zap++;
+                    }
+                      
+                    sc++;
+                }
+            }
+
+           
+            if (sc==0)
+            { N = N - 2 * sc;
+                Console.WriteLine("Razmer massiva " + N);
+                for (j = 0; j < N; j++)
+                    Console.WriteLine("a[" + j + "]=" + a[j]);
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("Razmer massiva " + N);
+                for (i = 0; i < N; i++)
+                    Console.WriteLine("a[" + i + "]=" + a[i]);
+                Console.ReadKey();
+            }
+
+
         }
+    }
+}
+using System;
+namespace sixteen.three
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int N, i, min, max, MIN, MAX, j;
+            max = j = i = 0;
+            min = 1000;
+            MIN = MAX = 0;
+            N = Convert.ToInt32(Console.ReadLine());
+            int[] a = new int[N];
+            for (i = 0; i < N; i++)
+            {
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            for (i = 0; i < N; i++)
+            {
+                if (max < a[i])
+                {
+                    max = a[i];
+                    MAX = i;
+                }
+
+                if (min > a[i])
+                {
+                    min = a[i];
+                    MIN = i;
+                }
+            }
+            for (j = 0; j <= MIN - 2; j++)
+            {
+                a[j] = a[i];
+           
+            }
+            a[MIN-1] = 0;
+            a[MIN] = min;
+            a[MAX] = max;
+            a[MAX + 1] = 0;
+            for (j = MAX + 2; j < N - 2; j++)
+            {
+             
+                a[j+1] = a[j];
+
+            }
+            N = N + 2;
+
+            for (j = 0; j < N; j++)
+                Console.WriteLine("a[" + j + "] = " + a[j]);
+        }
+
     }
 }
