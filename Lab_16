@@ -213,3 +213,51 @@ namespace sixteen.three
 
     }
 }
+using System;
+
+namespace sixteen.four
+{
+    class Program
+    {
+        static void Main(string[] args)
+        { int sc, i, j, we, jj;
+            sc = i = j = we = jj=  0;
+            Console.WriteLine("Enter the size of array");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[] a = new int[n];
+            for (i = 0; i < n; i++)
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            for (i=0; i < n; i++)
+            if (a[i]<0)
+                    sc++;
+            int[] b = new int[n + sc];
+            for (i = 0; i < n; i++)
+                b[i] = a[i];
+           
+            for (i=0; i<n+sc-1;i++)
+            {
+                if (b[i] < 0)
+                {
+                    b[i + 1] = 0;
+                    j = i + 2; i = i + 1;
+                    while (i < n + sc - 2)
+                    {
+                        b[j] = a[i];
+                        j++;
+                        i++;
+                      
+                    }
+                  
+
+   
+                }
+
+            }
+
+            Console.Write("Changed array is");
+            for (i=0; i<n + sc; i++)
+            Console.WriteLine("a[" + i + "] " + b[i]);
+        }
+    }
+}
+
