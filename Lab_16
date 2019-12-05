@@ -119,7 +119,7 @@ namespace sixteen.three
             min = 1000;
             MIN = MAX = 0;
             N = Convert.ToInt32(Console.ReadLine());
-            int[] a = new int[N];
+            int[] a = new int[N+2];
             for (i = 0; i < N; i++)
             {
                 a[i] = Convert.ToInt32(Console.ReadLine());
@@ -137,25 +137,77 @@ namespace sixteen.three
                     min = a[i];
                     MIN = i;
                 }
+                
             }
-            for (j = 0; j <= MIN - 2; j++)
+            if (MIN < MAX)
             {
-                a[j] = a[i];
-           
-            }
-            a[MIN-1] = 0;
-            a[MIN] = min;
-            a[MAX] = max;
-            a[MAX + 1] = 0;
-            for (j = MAX + 2; j < N - 2; j++)
-            {
-             
-                a[j+1] = a[j];
+                for (i = 0; i < MIN; i++)
+                {
+                    a[j] = a[i];
+                    j++;
+
+                }
+
+
+                a[MAX] = a[MAX - 1];
+
+                for (j = MIN; j < MAX - 1; j++)
+                {
+                    a[j + 1] = a[j];
+
+                }
+                a[MIN] = 0;   j = MAX + 3; i = MAX + 1;
+                while (i < N)
+                {
+                 
+                   
+                        a[j] = a[i];
+                    j++;
+                    i++;
+                }
+
+
+
+                a[MAX + 1] = max;
+                a[MAX + 2] = 0;
 
             }
-            N = N + 2;
+            else
+            {
+                for (i = 0; i < MAX; i++)
+                {
+                    a[j] = a[i];
+                    j++;
 
-            for (j = 0; j < N; j++)
+                }
+
+
+                a[MIN] = a[MIN - 1];
+
+                for (j = MAX; j < MIN - 1; j++)
+                {
+                    a[j + 1] = a[j];
+
+                }
+                a[MAX] = 0;
+                j = MIN + 3; i = MIN + 1;
+                while (i < N)
+                {
+
+
+                    a[j] = a[i];
+                    j++;
+                    i++;
+                }
+
+
+                a[MIN + 1] = min;
+                a[MIN + 2] = 0;
+
+            }
+
+
+            for (j = 0; j < N+2; j++)
                 Console.WriteLine("a[" + j + "] = " + a[j]);
         }
 
