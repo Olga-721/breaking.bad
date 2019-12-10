@@ -5,7 +5,8 @@ namespace _17._1
     class Program
     {
         static void Main(string[] args)
-        { int i, sc, per, SC, step;
+        {
+            int i, sc, per, SC, step;
             sc = per = SC = step = 0;
             Console.WriteLine("Введите рзамер массива");
             int N = Convert.ToInt32(Console.ReadLine());
@@ -14,10 +15,10 @@ namespace _17._1
                 a[i] = Convert.ToInt32(Console.ReadLine());
             int[] b = new int[N];
             int[] c = new int[N];
-            for (i=step; i<N-1; i++)
+            for (i = step; i < N - 1; i++)
             {
                 sc = 1; per = 0;
-                while (a[i] == a[i+1])
+                while (a[i] == a[i + 1])
                 {
                     sc++;
                     per = a[i];
@@ -26,30 +27,44 @@ namespace _17._1
                 b[step] = sc;
                 c[step] = per;
                 sc = 1;
-                if ((a[i] != a[i + 1]) & (a[i] != a[i - 1]))
-
+                if (a[i + 1] != 0)
                 {
-                    c[step] = a[i];
-                    b[i] = sc;
+                    if ((a[i] != a[i + 1]) & (a[i] != a[i - 1]))
+
+                    {
+                        c[step] = a[i];
+                        b[i] = sc;
+                        c[step + 1] = a[i +1];
+                       
+                    }
                 }
+
                 else
-                    if ((a[i] != a[i + 1]) & (a[i] == a[i - 1]))
-                {   c[step + 1] = a[i+1];
-                    b[i + 1] = sc;
+                {
+
+                    b[i] = 1;
+                    c[i] = a[i];
                 }
-                 
-                  
-          
+                    if ((a[i] != a[i + 1]) & (a[i] == a[i - 1]))
+                {
+                    c[step + 1] = a[i + 1];
+                    b[i + 1] = sc;
+                   
+                   
+                }
+
                 SC++;
                 step++;
             }
             Console.WriteLine("Ваш измененный массив");
             for (i = 0; i <= SC; i++)
                 Console.WriteLine("b[" + i + "] = " + b[i] + " c[" + i + "] = " + c[i]);
-               
+
         }
     }
 }
+                 
+                  
 using System;
 
 namespace _17._2
