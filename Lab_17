@@ -114,3 +114,43 @@ namespace ConsoleApp15
         }
     }
 }
+
+using System;
+
+namespace 17.4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int N, i, max;
+            double st, MAX;
+            MAX = st = max = 0;
+            N = Convert.ToInt32(Console.ReadLine());
+            int[] x = new int[N];
+            int[] y = new int[N];
+            for (i=0;i<N;i++)
+            {
+                x[i] = Convert.ToInt32(Console.ReadLine());
+                y[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            for (i=0;i<N;i++)
+            {
+                if ((x[i] < 0) & (y[i] > 0))
+                    st = Math.Sqrt(x[i] * x[i] + y[i] * y[i]);
+                if (st > MAX)
+                {
+                    MAX = st;
+                    max = i;
+                }
+            }
+            if (MAX == 0)
+                Console.WriteLine("Vashi koordinaty (0,0)");
+            else
+                Console.WriteLine("Vasha koordinata (" + x[max] + "," + y[max] + ")");
+
+
+
+        }
+    }
+}
