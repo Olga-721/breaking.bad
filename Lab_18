@@ -100,3 +100,42 @@ namespace ConsoleApp121
         }
     }
 }
+using System;
+
+
+namespace eighteen.two
+{
+    class Program
+{
+    static void Main(string[] args)
+    {
+        int i, j, sum, pr;
+            sum =  0;
+            pr = 1;
+        Console.WriteLine("Vvedite kolichestvo strok");
+        int M = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Vvedite kolichestvo stolbcov");
+        int N = Convert.ToInt32(Console.ReadLine());
+        int[,] matr = new int[M+1, N+1];
+        Console.WriteLine("Vvedite ele-ty matr");
+        for (i = 1; i <= M; i++)
+        {
+            for (j = 1; j <= N; j++)
+            {
+                matr[i, j] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+            Console.WriteLine("Vvedite K");
+            int K = Convert.ToInt32(Console.ReadLine());
+            for (j=1;j<=N; j++)
+            {
+                sum = matr[K, j]+ sum;
+                pr = matr[K, j] * pr;
+              
+            }
+            Console.WriteLine("sum=" + sum + ", pr=" + pr);
+
+    }
+
+}
+}
