@@ -253,7 +253,7 @@ namespace eighteen.five
         static void Main(string[] args)
         {
             int i, j, pr, maxpr, sch, ind;
-            double srar;
+            int srar = 0;
             maxpr  = i = 0;
             pr = sch = ind  = 1;
             srar = 0;
@@ -262,7 +262,7 @@ namespace eighteen.five
             Console.WriteLine("Vvedite kolichestvo stolbcov");
             int N = Convert.ToInt32(Console.ReadLine());
             int[,] matr = new int[M + 1, N + 1];
-            int[] a = new int[N + 1];
+            int[] a = new int[N + 2];
             Console.WriteLine("Vvedite ele-ty matr");
             for (i = 1; i <= M; i++)
             {
@@ -278,19 +278,20 @@ namespace eighteen.five
                 {  maxpr++;
                if (matr[i, j] % 2 == 1)
                         ind++;
+                    srar = j;
                 }
                
                 if (ind == maxpr)
                 {
-                    i++;
-  a[i] = j;
+                    a[sch] = srar;
+                    sch++;
                 }
+               
                   
       
           }
-            
+             Console.WriteLine("Vse ele-ty nechetnie v " + a[1] + "om stolbce ");
            
-  Console.WriteLine("Vse ele-ty nechetnie v " + a[1] + "om stolbce ");
         }
 
     }
