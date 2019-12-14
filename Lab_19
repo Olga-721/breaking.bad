@@ -1,0 +1,288 @@
+using System;
+
+namespace _19._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, j, min, max, perm, perM;
+            min = 1000;
+            max = perm = perM = 0;
+            Console.WriteLine("Vvedite kolichestvo strok");
+            int M = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Vvedite kolichestvo stolbcov");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[,] matr = new int[M + 1,N+1] ;
+            for (i=1;i<=M; i++)
+            {
+                for (j=1; j<=N;j++)
+                {
+                    matr[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            for (i = 1; i <= M; i++)
+            {
+                max = 0; min = 1000;
+                for (j = 1; j <= N; j++)
+                {
+                    if (matr[i, j] > max)
+                    { max = matr[i, j];
+                        perM = j;
+                    }
+                       
+                    if (matr[i, j] < min)
+                    {
+                        min = matr[i, j];
+                        perm = j;
+                    }
+                      
+                }
+                matr[i, perM] = min;
+                matr[i, perm] = max;
+            }
+
+            for (i = 1; i <= M; i++)
+            {
+                for (j = 1; j <= N; j++)
+                {
+                    Console.WriteLine("matr[" + i + ", " + j + "] = " + matr[i, j]);
+                }
+            }
+        }
+    }
+}
+using System;
+
+namespace _19._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, j, min, max, perm, perM, sch;
+            min = 1000;
+            max = perm = perM = sch = 0;
+            Console.WriteLine("Vvedite kolichestvo strok");
+            int M = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Vvedite kolichestvo stolbcov");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[,] matr = new int[M + 1, N + 1];
+            for (i = 1; i <= M; i++)
+            {
+                for (j = 1; j <= N; j++)
+                {
+                    matr[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            for (i = 1; i <= M; i++)
+            {
+                for (j = 1; j <= N; j++)
+                {
+                    if (matr[i, j] >= max)
+                    {
+                        max = matr[i, j];
+                        perM = j;
+                    }
+
+                    if (matr[i, j] <= min)
+                    {
+                        min = matr[i, j];
+                        perm = j;
+                    }
+
+                }
+
+            }i = 1;
+            for (j = 1; j <= N; j++)
+            {
+                sch = matr[i, perM];
+                matr[i, perM] = matr[i, perm];
+                matr[i, perm] = sch;
+                i++;
+                
+
+            }
+            for (i = 1; i <= M; i++)
+            {
+                for (j = 1; j <= N; j++)
+                {
+                    Console.WriteLine("matr[" + i + ", " + j + "] = " + matr[i, j]);
+                }
+            }
+
+        }
+    }
+}
+using System;
+
+namespace _19._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, j, min, max, sch, sch1;
+          
+            max = min = 0;
+            sch = sch1 = 0;
+            Console.WriteLine("Vvedite poryadok matr");
+            int M = Convert.ToInt32(Console.ReadLine());
+           
+            int[,] matr = new int[M + 1, M + 1];
+            int[,] m = new int[M / 2 + 1, M / 2 + 1];
+            for (i = 1; i <= M; i++)
+            {
+                for (j = 1; j <= M; j++)
+                {
+                    matr[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            min = M / 2;
+          
+            
+            for(i=1;i<=min;i++)
+            {
+                for(j=1;j<=min;j++)
+                {
+                    m[i, j] = matr[i, j];
+                }
+            }
+            for (i = 1; i <= min; i++)
+            {
+                for (j = 1; j <= min; j++)
+                {
+                    matr[i, j] = matr[i + min,j+min];
+                                  
+                }
+
+            }
+            for (i=1;i<=min;i++)
+            {
+                for (j=1;j<=min;j++)
+                { 
+                     matr[min+i,min + j] = m[i, j];
+                       
+                 
+                   
+                }
+            }
+            for (i = 1; i <= M; i++)
+            {
+                for (j = 1; j <= M; j++)
+                {
+                    Console.Write(" matr[" + i + ", " + j + "] = " + matr[i, j]);
+                }
+                Console.WriteLine("");
+            }
+
+        }
+    }
+}using System;
+
+namespace _19._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, j, min, max, sch, sch1;
+            j = 1;
+            max = min = 0;
+            sch = sch1 = 0;
+            Console.WriteLine("Vvedite poryadok matr");
+            int M = Convert.ToInt32(Console.ReadLine());
+            int N = M;
+            int[,] matr = new int[M + 1, M + 1];
+            int[,] m = new int[M + 1, M + 1];
+            for (i = 1; i <= M; i++)
+            {
+                for (j = 1; j <= M; j++)
+                {
+                    matr[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            for (i = 1; i <= M; i++)
+                for (j = 1; j <= M; j++)
+                    m[i, j] = matr[i, j];
+           for (i=1;i<M;i++)
+                for (int l = i+1; l <= M;l++)
+                    if (matr[i,1]>matr[l,1])
+                        for(j=1;j<=N;j++)
+                        {
+                            sch = matr[i, j];
+                            matr[i, j] = matr[l, j];
+                            matr[l, j] = sch;
+                        }
+            for (i = 1; i <= M; i++)
+            {
+                for (j = 1; j <= M; j++)
+                {
+                    Console.Write(" matr[" + i + ", " + j + "] = " + matr[i, j]);
+                }
+                Console.WriteLine("");
+            }
+
+        }
+    }
+}
+using System;
+
+namespace _19._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, j, min, max, sch, dia;
+            j = 1;
+            max = min = 0;
+            sch = dia = 0;
+            Console.WriteLine("Vvedite poryadok matr");
+            int M = Convert.ToInt32(Console.ReadLine());
+
+            int[,] matr = new int[M + 1, M + 1];
+
+            for (i = 1; i <= M; i++)
+            {
+                for (j = 1; j <= M; j++)
+                {
+                    matr[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            max = matr[1, 1];
+            for (dia = 1; dia < 2 * M; dia++)
+            {
+                min = 0;
+                if (dia <= M)
+                {
+                    for (i = 1; i <= dia; i++)
+                        for (j = 1; j <= dia; j++)
+                        {
+                            if (j == dia - i + 1)
+                                min = min + matr[i, j];
+                            if (min < max)
+                                max = min;
+                        }
+                }
+                else
+                    if (dia > M)
+                {
+                    for (i = dia-M+1; i <= M; i++)
+                        for (j = dia - M +1; j <= M; j++)
+                        {
+                            if (j == dia - i + 1)
+                                min = min + matr[i, j];
+                            if (min < max)
+                                max = min;
+                        }
+                }
+                Console.Write(" Summa diagonali ravna " + dia + " " + min);
+
+            }
+           
+          
+        }
+
+    }
+}
