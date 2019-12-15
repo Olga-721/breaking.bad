@@ -1,0 +1,67 @@
+using System;
+using System.Text;
+
+namespace twentyone.one
+{
+    class IndexOfCII
+    {
+        static void Main(string[] args)
+        {
+            int i, inf;
+            inf = 0;
+            string str = Console.ReadLine();
+            for (i=0;i<str.Length;i++)
+            {
+                if (str[i] == ' ' && str[i + 1] != ' ')
+                    inf++;
+
+               
+            }
+            Console.WriteLine("Kolichesrvo vashih slov ravno " + (inf + 1));
+        }
+
+    }
+}
+using System;
+using System.Text;
+
+namespace twentyone.one
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, inf, per, sch, j, ZEN;
+            inf = per = j = ZEN = 0;
+            sch = 1000;
+            int[] max = new int[100];
+            int[] prob = new int[100];
+                string str = Console.ReadLine();
+            for (i = 0; i < str.Length; i++)
+                if (str[i] == ' ')
+                {  per++;
+                    prob[i] = i;
+                }
+                  
+            for (i = 0; i < per; i++)
+            {
+                
+                for (i=j;i < prob[ZEN]; i++)
+                if (str[i]!=' ')
+                    {  inf++;
+                        j++;
+                    }
+                ZEN++;
+                j = j + 2;
+
+                if (inf < sch)
+                    sch = inf;
+                inf = 0;
+
+                Console.WriteLine("Min kol-vo bukv v slove ravno " + sch);
+            }
+           
+        }
+
+    }
+}
