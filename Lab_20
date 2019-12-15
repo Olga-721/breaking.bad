@@ -1,0 +1,154 @@
+using System;
+using System.Text;
+
+namespace twenty.one
+{
+    class IndexOfCII
+    {
+        static void Main(string[] args)
+        {
+          
+            char j = Convert.ToChar(Console.ReadLine());
+             int i, ii;
+            char pred, pered;
+            
+            i = Convert.ToInt32(j) + 1;
+            pred = Convert.ToChar(i);
+            ii = Convert.ToInt32(j) - 1;
+            pered = Convert.ToChar(ii);
+            Console.WriteLine((char)ii + " " + j + " " + (char)i);
+
+        }
+
+    }
+}
+using System;
+using System.Text;
+
+namespace 20.2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Vvedite stroku");
+            string str = Console.ReadLine();
+            for (int i = 0; i < str.Length-1; i++)
+                Console.Write(str[i] + "_");
+            Console.Write(str[str.Length - 1]);
+        } 
+    }
+}
+using System;
+using System.Text;
+
+namespace twenty.three
+{
+    class IndexOfCII
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Vvedite stroku");
+            string str = Console.ReadLine();
+        int  i, ind;
+            ind = 0;
+       
+
+           
+            for (i = 0; i < str.Length; i++)
+              
+                {
+                if (str[i] >= 'A' && str[i] <= 'Z')
+                    ind++;
+                
+
+                }
+            Console.Write(ind);
+
+
+
+
+
+
+
+        }
+
+    }
+}
+
+using System;
+using System.Text;
+
+namespace twenty.four
+{
+    class IndexOfCII
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Vvedite stroku");
+            string str = Console.ReadLine();
+        int start, at, end, count, index, i;
+        end = str.Length;
+        start = i = 0;
+        count = at = index = 0;
+            char si = Convert.ToChar(Console.Read());
+            string s2 = "";
+            for (i = 0; i < str.Length; i++)
+              
+                {
+                s2 = s2 + str[i];
+                if (str[i] == si)
+                    s2 = s2 + str[i];
+
+                }
+            Console.WriteLine(s2);
+
+
+
+
+
+
+        }
+
+    }
+}
+
+using System;
+using System.Text;
+
+namespace twelwe.five
+{
+    class IndexOfCII
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Vvedite stroku");
+            string str = Console.ReadLine();
+        int start, at, end, count, index;
+        end = str.Length;
+        start = 0;
+        count = at = index = 0;
+           
+
+            FindAllChar('s', str);
+          
+        
+        }
+
+        private static void FindAllChar(Char target, String searched)
+        {
+            int startindex = -1;
+            int hitcount = 0;
+            while(true)
+
+            {
+                startindex = searched.IndexOf(
+                    target, startindex + 1, searched.Length - startindex - 1);
+                if (startindex < 0) break;
+                Console.Write("{0}, ", startindex);
+                hitcount++;
+            }
+            Console.WriteLine("occurrences: {0}", hitcount);
+        }
+    }
+}
