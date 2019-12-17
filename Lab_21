@@ -126,3 +126,45 @@ namespace twentyone.six
         }
     }
 }
+using System;
+
+using System.Collections.Generic;
+namespace twentyone.seven
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A, B, i, n, s;
+          
+            A = 0;
+            n = 0;
+            Console.WriteLine("Введите размер массива ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            s = N;
+ string[] muss = new string[N];
+            string[] array = new string[N];
+
+            while (N > 0)
+            {
+               muss[n] = Console.ReadLine();
+                array[n] = muss[n];
+                n++;
+                N--;
+
+            }
+            N = s;
+
+ for (i = 1; i < N; i = i + 2)
+                Console.Write(array[i]);
+
+            for (B = N-1; B >= 0; B = B - 2)
+            {
+                Console.Write(array[B]);
+
+            }
+           
+
+        }
+    }
+}
