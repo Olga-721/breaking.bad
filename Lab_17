@@ -114,6 +114,80 @@ namespace ConsoleApp15
         }
     }
 }
+using System;
+namespace 17_3 {
+
+class Program
+{
+static void Main()
+{
+Console.Write("Введите размер массива: ");
+int N = Convert.ToInt32(Console.ReadLine());
+int[] A = new int[N];
+int i, j, count = 1, m = 0, a = 0, b = 0, c = 0, d = 1;
+Console.Write("Введите число K: ");
+int k = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите элементы массива: ");
+for (i = 0; i < N; i++)
+{
+A[i] = Convert.ToInt32(Console.ReadLine());
+}
+for (i = 0; i < N; i++)
+{
+if (i != N - 1)
+{
+if (A[i] == A[i + 1])
+{
+count++;
+}
+else
+{
+m++;
+if (m == k)
+{
+b = count;
+a = A[i];
+}
+count = 1;
+}
+}
+else
+{
+c = A[i];
+j = N - 2;
+while (A[i] == A[j])
+{
+d++;
+j--;
+}
+}
+}
+m = 0;
+i = 0;
+while (m != k - 1)
+{
+Console.Write(A[i] + " ");
+if (A[i] != A[i + 1]) m++;
+i++;
+}
+for (j = 0; j < d; j++)
+{
+Console.Write(c + " ");
+}
+i++;
+while (A[i] != c)
+{
+Console.Write(A[i] + " ");
+i++;
+}
+for (j = 0; j < b; j++)
+{
+Console.Write(a + " ");
+}
+}
+}
+}
+
 
 using System;
 
@@ -154,4 +228,51 @@ namespace 17.4
         }
     }
 }
- 
+ using System;
+ namespace 17_5
+ {
+class Program
+{
+static void Main()
+{
+Console.Write("Введите размер массива: ");
+int n = Convert.ToInt32(Console.ReadLine());
+double[,] a = new double[n, 2];
+Console.WriteLine("Введите координаты точек: ");
+for (int i = 0; i < n; i++)
+{
+Console.Write($"x{i}: ");
+a[i, 0] = Convert.ToInt32(Console.ReadLine());
+Console.Write($"y{i}: ");
+a[i, 1] = Convert.ToInt32(Console.ReadLine());
+}
+int p1 = 0, p2 = 0, p3 = 0;
+double p, pmax = 0;
+for (int i = 0; i < n; i++)
+{
+for (int i2 = i + 1; i2 < n; i2++)
+{
+for (int i3 = i2 + 1; i3 < n; i3++)
+{
+p = 0;
+p += Math.Sqrt(Math.Pow(a[i, 0] - a[i2, 0], 2) + Math.Pow(a[i, 1] - a[i2, 1], 2));
+p += Math.Sqrt(Math.Pow(a[i, 0] - a[i3, 0], 2) + Math.Pow(a[i, 1] - a[i3, 1], 2));
+p += Math.Sqrt(Math.Pow(a[i2, 0] - a[i3, 0], 2) + Math.Pow(a[i2, 1] - a[i3, 1], 2));
+if (p > pmax)
+{
+p1 = i;
+p2 = i2;
+p3 = i3;
+pmax = p;
+}
+}
+}
+}
+Console.WriteLine("Наибольший периметр треугольника: " + pmax);
+Console.WriteLine("Координаты вершин:");
+Console.WriteLine(a[p1, 0] + ", " + a[p1, 1]);
+Console.WriteLine(a[p2, 0] + ", " + a[p2, 1]);
+Console.WriteLine(a[p3, 0] + ", " + a[p3, 1]);
+}
+} 
+}
