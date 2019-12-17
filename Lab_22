@@ -1,0 +1,50 @@
+using System;
+using System.IO;
+using System.Collections.Generic;
+namespace twentytwo.two
+{
+    class Program
+    {
+        static void Main(string[] args)
+        { int i,j = 0;
+            string TEXT;
+           
+            int N = Convert.ToInt32(Console.ReadLine());
+            int K = Convert.ToInt32(Console.ReadLine());
+           string k = "*";
+            string text = TEXT = "";
+
+            for (i = 0; i < N; i++)
+            {
+                text = "\n";
+                for (j = 0; j < K; j++)
+                    text = text + k;
+                TEXT = TEXT +text;
+            }
+               
+            string writePath = @"C:\Users\elodo\Desktop\универ\hta.txt";
+           
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default))
+                {
+                    sw.WriteLine( TEXT);
+                }
+                using (StreamWriter sw = new StreamWriter(writePath, true, System.Text.Encoding.Default))
+                {
+                    sw.WriteLine("Дозапись");
+
+                }
+                Console.WriteLine("Zapis' vipolnena");
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+
+        }
+    }
+}
+
