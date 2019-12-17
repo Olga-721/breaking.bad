@@ -37,6 +37,42 @@ class Program
         }
     }
 }
+using System;
+
+using System.Collections.Generic;
+namespace twentyone.три
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, inf,  j;
+            inf = j = 0;
+            string str = Console.ReadLine();
+            char[] ar = new char[100];
+            for (i = 0; i < str.Length; i++)
+                ar[i] = str[i];
+           for (i=inf;i<str.Length-1;i++)
+            {
+                j = str[i];
+                while(str[i]!=' ')
+                {
+
+                    if (j == str[i + 1])
+                        ar[i + 1] = '.'; Console.Write(ar[i]);
+                    i++;
+
+
+                }
+                inf++;
+                Console.Write(" ");
+               
+            }
+        }
+    }
+}
+
+
 
 using System;
 using System.Text;
