@@ -1,5 +1,65 @@
 using System;
 using System.IO;
+using System.Threading.Tasks;
+using System.Text;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace twentytwo.one
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, j = 0;
+            string TEXT;
+
+
+            string writePath = @"C:\Users\elodo\Desktop\универ\shta.txt";
+           
+            try
+            {
+                using (StreamReader sr = new StreamReader(writePath))
+                {
+                    Console.WriteLine(sr.ReadToEnd());
+                   string ar = Convert.ToString(sr);
+                    char[] mass = new char[100];
+                    for (i = 0; i < ar.Length-1; i++)
+                        mass[i] = ar[i];
+                   
+                    while (mass[i] != ' ')
+                    {   j = i;
+                        i++;
+                    }
+                    char[] izm = new char[100];
+                    while (i < j)
+                    {
+
+                        izm[i] = ' ';
+                     
+                        i++;
+                       
+                        File.AppendAllText(writePath, Convert.ToString(izm[i]));
+                    }
+                  
+                     
+
+                }
+              
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+
+        }
+    }
+}
+
+
+using System;
+using System.IO;
 using System.Collections.Generic;
 namespace twentytwo.two
 {
