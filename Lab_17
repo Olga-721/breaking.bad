@@ -180,7 +180,7 @@ while (A[i] != c)
 Console.Write(A[i] + " ");
 i++;
 }
-for (j = 0; j < b; j++)
+for (j = 0; j < b-2; j++)
 {
 Console.Write(a + " ");
 }
@@ -229,7 +229,7 @@ namespace 17.4
     }
 }
  using System;
- namespace 17_5
+ namespace _17._5
  {
 class Program
 {
