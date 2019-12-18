@@ -273,31 +273,16 @@ namespace _16._5__
             for (i = 0; i < n; i++)
                 b[i] = a[i];
 
-            for (i = 0; i < n + sc -1; i++)
+            for (i = 0; i < n; i++)
             {
-                if (a[i] > 0)
-                {
-                    we = i;
-                
-                  
-                    while ( i< n + sc-1)
-                    {
-                        b[i+1] = a[i];
-                        j++;
-                        i++;
-
-                    }
-                 
-                    i = we;    b[i] = 0;
-                 
-                
-                   
-                }
-            }
-
-            Console.Write("Changed array is");
-            for (i = 0; i < n + sc; i++)
-                Console.WriteLine("a[" + i + "] " + b[i]);
+              if (a[i] > 0) {
+ b[i + k] = 0; 
+b[i + (1 + k)] = a[i]; k++; 
+} 
+else b[i + k] = a[i]; 
+} 
+for (i = 0; i < (n + k); i++) 
+Console.WriteLine("a[" + i + "]=" + b[i]);
         }
     }
 }
