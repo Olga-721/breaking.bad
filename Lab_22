@@ -110,4 +110,70 @@ namespace twentytwo.two
         }
     }
 }
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using System.Text;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace twentytwo.three
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, j;
+            i = j = 0;
+
+
+
+            string writePath = @"C:\Users\elodo\Desktop\универ\shta.txt";
+
+            try
+            {
+                using (StreamReader sr = new StreamReader(writePath))
+                {
+                    Console.WriteLine(sr.ReadToEnd());
+
+                    string ar = Convert.ToString(sr);
+                    char[] mass = new char[100];
+                    for (i = 0; i < ar.Length; i++)
+                        mass[i] = ar[i];
+                    for (i = 0; i < ar.Length; i++)
+                        if (mass[i] == ' ')
+                        {
+                            j = i;
+                            break;
+                        }
+                    char[] izm = new char[100];
+                    for (i = j; ar.Length > i; i++)
+                    {
+
+                        izm[i] = mass[j];
+
+                        j++;
+
+                        using (StreamWriter sw = new StreamWriter(writePath))
+
+                            Console.Write(izm[i]);
+                     
+                    }
+
+
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+
+        }
+    }
+}
+
+
 
