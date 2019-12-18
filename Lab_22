@@ -115,4 +115,63 @@ namespace twentytwo.one
 }
 
 
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using System.Text;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace twentytwo.one
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, j;
+            string ar, arr;
+            ar = arr = "\0";
+            i = j = 0;
+
+
+
+            string writePath = @"C:\Users\elodo\Desktop\универ\shta.txt";
+            string readPath = @"C:\Users\elodo\Desktop\универ\ta.txt";
+
+            try
+            {
+                using (StreamReader sr = new StreamReader(writePath))
+                {
+                    Console.WriteLine(sr.ReadToEnd());
+
+                    ar = Convert.ToString(sr);
+
+                }
+
+
+                using (StreamReader sw = new StreamReader(readPath))
+                {
+                    Console.WriteLine(sw.ReadToEnd());
+                    arr = Convert.ToString(sw);
+                }
+               
+ string TEXT = arr + "\n" + ar;
+                using (StreamWriter tr = new StreamWriter(readPath, true, System.Text.Encoding.Default))
+                {
+                    tr.WriteLine(TEXT);
+                }
+            }
+
+
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+
+        }
+    }
+}
+
+
 
