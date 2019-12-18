@@ -11,8 +11,9 @@ namespace twentytwo.one
     {
         static void Main(string[] args)
         {
-            int i, j = 0;
-            string TEXT;
+            int i, j;
+            i= j = 0;
+           
 
 
             string writePath = @"C:\Users\elodo\Desktop\универ\shta.txt";
@@ -22,23 +23,25 @@ namespace twentytwo.one
                 using (StreamReader sr = new StreamReader(writePath))
                 {
                     Console.WriteLine(sr.ReadToEnd());
-                   string ar = Convert.ToString(sr);
-                    char[] mass = new char[100];
-                    for (i = 0; i < ar.Length-1; i++)
-                        mass[i] = ar[i];
-                   
-                    while (mass[i] != ' ')
-                    {   j = i;
-                        i++;
-                    }
-                    char[] izm = new char[100];
-                    while (i < j)
-                    {
+          
+           
+            char[] mass = new char[100];
+            for (i = 0; i < ar.Length; i++)
+                mass[i] = ar[i];
+            for (i=0;i<ar.Length;i++)
+            if (mass[i] == ' ')
+            {
+                j = i;
+                    break;
+            }
+            char[] izm = new char[100];
+            for  (i = j-1; ar.Length > i; i++)
+            {
 
-                        izm[i] = ' ';
-                     
-                        i++;
-                       
+                izm[i] = mass[j];
+
+                j++;
+            
                         File.AppendAllText(writePath, Convert.ToString(izm[i]));
                     }
                   
