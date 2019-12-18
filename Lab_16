@@ -270,18 +270,17 @@ namespace _16._5__
                 if (a[i] > 0)
                     sc++;
             int[] b = new int[n + sc];
-            for (i = 0; i < n; i++)
-                b[i] = a[i];
+            
 
             for (i = 0; i < n; i++)
             {
               if (a[i] > 0) {
- b[i + k] = 0; 
-b[i + (1 + k)] = a[i]; k++; 
+ b[i + we] = 0; 
+b[i + (1 + we)] = a[i]; we++; 
 } 
-else b[i + k] = a[i]; 
+else b[i + we] = a[i]; 
 } 
-for (i = 0; i < (n + k); i++) 
+for (i = 0; i < (n + we); i++) 
 Console.WriteLine("a[" + i + "]=" + b[i]);
         }
     }
