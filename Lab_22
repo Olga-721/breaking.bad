@@ -65,54 +65,38 @@ namespace twentytwo.one
             int i, j;
             i = j = 0;
 
-
-
-            string writePath = @"C:\Users\elodo\Desktop\универ\shta.txt";
-
-            try
-            {
-                using (StreamReader sr = new StreamReader(writePath))
+            StreamReader sr = new StreamReader(@"C:\Users\elodo\Desktop\универ\22.1.txt");
+           
+            string file1 = sr.ReadToEnd();
+            Console.WriteLine("Iznachal'naya stroka" + file1);
+            StreamWriter sw = new StreamWriter(@"C:\Users\elodo\Desktop\универ\22.11.txt");
+            char[] mass = new char[100];
+            for (i = 0; i < file1.Length; i++)
+                mass[i] = file1[i];
+            for (i = 0; i < file1.Length; i++)
+                if (mass[i] == ' ')
                 {
-                    Console.WriteLine(sr.ReadToEnd());
-
-                    string ar = Convert.ToString(sr);
-                    char[] mass = new char[100];
-                    for (i = 0; i < ar.Length; i++)
-                        mass[i] = ar[i];
-                    for (i = 0; i < ar.Length; i++)
-                        if (mass[i] == ' ')
-                        {
-                            j = i;
-                            break;
-                        }
-                    char[] izm = new char[100];
-                    for (i = j; ar.Length > i; i++)
-                    {
-
-                        izm[i] = mass[j];
-
-                        j++;
-
-                        using (StreamWriter sw = new StreamWriter(writePath))
-
-                            Console.Write(izm[i]);
-                     
-                    }
-
-
-
+                    j = i;
+                    break;
                 }
-
-            }
-            catch (Exception e)
+            char[] izm = new char[100];
+            for (i = j-1; file1.Length > i; i++)
             {
-                Console.WriteLine(e.Message);
+
+                izm[i] = mass[j];
+
+                j++;
+
+                sw.Write(mass[j]);
+                Console.Write(izm[i]);
+
+
             }
-
-
+           
         }
     }
 }
+
 
 
 using System;
@@ -122,7 +106,7 @@ using System.Text;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace twentytwo.one
+namespace twentytwo.three
 {
     class Program
     {
