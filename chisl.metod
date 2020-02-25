@@ -67,3 +67,20 @@ int main()
 			cout<<x3;
 	
 }
+//метод простых итераций
+#include <iostream>
+using namespace std;
+int main()
+{
+	double x = -1;
+	double fx = x * 2 + cos(x) - 0.5;
+	double sch, oper=0;
+	do {
+		sch = x;
+		x = x - fx / 3;
+		oper++;
+		fx = x * 2 + cos(x) - 0.5;
+	} while (abs(x - sch)/2 > 0.0001);
+	cout << x<<"\nKol-vo operations"<<oper;
+
+}
