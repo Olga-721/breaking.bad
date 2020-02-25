@@ -6,12 +6,12 @@ using namespace std;
 int main()
 {
 	cout << "Enter the sides of interpreter\n";
-	long double a, b;
-	cin >> a >> b;
+	long double a, b, e, num=0;
+	cin >> a >> b>>e;
 	long double fa = 2 * a + cos(a) - 0.5;
 	long double fb = 2 * b + cos(b) - 0.5;
 	if (fb*fa<0)
-	while ((b-a)/2 > 0.0001)
+	while ((b-a)/2 > e)
 	{
 		double sr = (b + a) / 2;
 		long double fss = 2 * sr + cos(sr) - 0.5;
@@ -19,12 +19,12 @@ int main()
 			a = sr;
 		if (fb * fss > 0)
 			b = sr;
+			num++;
 
 	}
 	else {
 		cout << "Error";
-		break;
-	}	cout << a << endl;
+	}	cout << a << "\nKol-vo iter " << num<<endl;
 
 }
 
@@ -35,15 +35,17 @@ int main()
 using namespace std;
 int main()
 {
-	float Fx, fx, x, y;
+	float Fx, fx, x, y, e, num = 0;
 	x = 1;
+	cin>>e;
 	do {
 		fx = x * 2 + cos(x) - 0.5;
 		Fx = 2 - sin(x);
 		y = x;
 		x = x - fx / Fx;
-	} while (abs(x - y) > 0.0001);
-	cout << x;
+		num++;
+	} while (abs(x - y) > e);
+	cout << x<<"\nKol-vo iter " << num;
 }
 
 //метод хорд
@@ -51,27 +53,30 @@ int main()
 using namespace std;
 int main()
 {
-	
+	double e, num=0;
+	cin>>e;
 			double x1 = -1;
 			double fx1 = x1 * 2 + cos(x1) - 0.5;
 			double x2 = 1;
 			double fx2 = x2 * 2 + cos(x2) - 0.5;
 			double x3 = x1 - (x2 - x1) * fx1 / (fx2 - fx1);
-			while (abs(x3 - x1) > 0.0001)
+			while (abs(x3 - x1) > e)
 			{
 				x1 = x3;
 				fx1 = x1 * 2 + cos(x1) - 0.5;
 				fx2 = x2 * 2 + cos(x2) - 0.5;
 				x3 = x1 - (x2 - x1) * fx1 / (fx2 - fx1);
+				num++;
 			}
-			cout<<x3;
+			cout<<x3<< "\nKol-vo iter " << num<<endl;
 	
 }
 //метод простых итераций
 #include <iostream>
 using namespace std;
 int main()
-{
+{double e;
+cin>>e;
 	double x = -1;
 	double fx = x * 2 + cos(x) - 0.5;
 	double sch, oper=0;
@@ -80,7 +85,7 @@ int main()
 		x = x - fx / 3;
 		oper++;
 		fx = x * 2 + cos(x) - 0.5;
-	} while (abs(x - sch)/2 > 0.0001);
-	cout << x<<"\nKol-vo operations"<<oper;
+	} while (abs(x - sch)/2 > e);
+	cout << x<<"\nKol-vo operations "<<oper;
 
 }
