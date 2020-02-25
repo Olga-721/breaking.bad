@@ -1,0 +1,74 @@
+//деление пополам
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+int main()
+{
+	cout << "Enter the sides of interpreter\n";
+	long double a, b;
+	cin >> a >> b;
+	long double fa = 2 * a + cos(a) - 0.5;
+	long double fb = 2 * b + cos(b) - 0.5;
+	if (fb*fa<0)
+	while ((b-a)/2 > 0.0001)
+	{
+		double sr = (b + a) / 2;
+		long double fss = 2 * sr + cos(sr) - 0.5;
+		if (fa * fss > 0)
+			a = sr;
+		if (fb * fss > 0)
+			b = sr;
+
+	}
+	else {
+		cout << "Error";
+		break;
+	}	cout << a << endl;
+
+}
+
+//метод ньютона
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+int main()
+{
+	float Fx, fx, x, y;
+	x = 1;
+	do {
+		fx = x * 2 + cos(x) - 0.5;
+		Fx = 2 - sin(x);
+		y = x;
+		x = x - fx / Fx;
+	} while (abs(x - y) > 0.0001);
+	cout << x;
+}
+
+//метод хорд
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp22
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double x1 = -1;
+            double fx1 = x1 * 2 + Math.Cos(x1) - 0.5;
+            double x2 = 1;
+            double fx2 = x2 * 2 + Math.Cos(x2) - 0.5;
+            double x3 = x1 - (x2 - x1) * fx1 / (fx2 - fx1);
+           while(Math.Abs(x3-x1)>0.0001)
+            {
+                x1 = x3;
+                fx1 = x1 * 2 + Math.Cos(x1) - 0.5;
+                fx2 = x2 * 2 + Math.Cos(x2) - 0.5;
+                x3 = x1 - (x2 - x1) * fx1 / (fx2 - fx1);
+            }
+            Console.WriteLine(x3);
+        }
+    }
+}
