@@ -47,28 +47,23 @@ int main()
 }
 
 //метод хорд
-using System;
-using System.Collections.Generic;
-
-namespace ConsoleApp22
+#include <iostream>
+using namespace std;
+int main()
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            double x1 = -1;
-            double fx1 = x1 * 2 + Math.Cos(x1) - 0.5;
-            double x2 = 1;
-            double fx2 = x2 * 2 + Math.Cos(x2) - 0.5;
-            double x3 = x1 - (x2 - x1) * fx1 / (fx2 - fx1);
-           while(Math.Abs(x3-x1)>0.0001)
-            {
-                x1 = x3;
-                fx1 = x1 * 2 + Math.Cos(x1) - 0.5;
-                fx2 = x2 * 2 + Math.Cos(x2) - 0.5;
-                x3 = x1 - (x2 - x1) * fx1 / (fx2 - fx1);
-            }
-            Console.WriteLine(x3);
-        }
-    }
+	
+			double x1 = -1;
+			double fx1 = x1 * 2 + cos(x1) - 0.5;
+			double x2 = 1;
+			double fx2 = x2 * 2 + cos(x2) - 0.5;
+			double x3 = x1 - (x2 - x1) * fx1 / (fx2 - fx1);
+			while (abs(x3 - x1) > 0.0001)
+			{
+				x1 = x3;
+				fx1 = x1 * 2 + cos(x1) - 0.5;
+				fx2 = x2 * 2 + cos(x2) - 0.5;
+				x3 = x1 - (x2 - x1) * fx1 / (fx2 - fx1);
+			}
+			cout<<x3;
+	
 }
