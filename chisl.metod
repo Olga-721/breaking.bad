@@ -50,26 +50,33 @@ int main()
 
 //метод хорд
 #include <iostream>
+#include <cmath>
+#include <locale.h>
 using namespace std;
+double f(double x)
+{
+	return 2*x - 0.5 + cos(x);
+}
+
+double F(double a, double b, double e, double num)
+{
+	while (fabs(f(b)) > e)
+	{
+		a = b - ((b - a) * f(b)) / (f(b) - f(a));
+		b = a - ((a - b) * f(a)) / (f(a) - f(b));
+		num++;
+	}
+	return b;
+}
 int main()
 {
-	double e,pr, num=0;
-	cin>>e;
-			double x1 = -1;
-			double fx1 = x1 * 2 + cos(x1) - 0.5;
-			double x2 = 1;
-			double fx2 = x2 * 2 + cos(x2) - 0.5;
-			double x3 = x1 - (x2 - x1) * fx1 / (fx2 - fx1);
-			while (abs(x3 - x1) > e)
-			{
-				pr = x3;
-				fx1 = pr * 2 + cos(pr) - 0.5;
-				fx2 = x2 * 2 + cos(x2) - 0.5;
-				x3 = x1 - (x2 - x1) * fx1 / (fx2 - fx1);
-				num++;
-			}
-			cout<<x3<< "\nKol-vo iter " << num<<endl;
-	
+	setlocale(LC_ALL, "Russian");
+	double a, b, e, num;
+	сout << "Введите стороны отрезка:";
+	cin >> a >> b;
+	cout << "Введите погрешность";
+	cin >> e;
+	cout << "Корень уравнения x=" << F(a, b, e, num) << endl;
 }
 //метод простых итераций
 #include <iostream>
