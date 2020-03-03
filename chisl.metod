@@ -53,30 +53,23 @@ int main()
 #include <cmath>
 #include <locale.h>
 using namespace std;
-double f(double x)
-{
-	return 2*x - 0.5 + cos(x);
-}
-
-double F(double a, double b, double e, double num)
-{
-	while (fabs(f(b)) > e)
-	{
-		a = b - ((b - a) * f(b)) / (f(b) - f(a));
-		b = a - ((a - b) * f(a)) / (f(a) - f(b));
-		num++;
-	}
-	return b;
-}
 int main()
 {
-	setlocale(LC_ALL, "Russian");
-	double a, b, e, num;
-	сout << "Введите стороны отрезка:";
-	cin >> a >> b;
-	cout << "Введите погрешность";
+	double x = -1, sch = 0;
+	double x2 = 1, e;
+	cout << "Enter the tochnost'";
 	cin >> e;
-	cout << "Корень уравнения x=" << F(a, b, e, num) << endl;
+	double fx = x * 2 + cos(x) - 0.5;
+	double fx2 = x2 * 2 + cos(x2) - 0.5;
+	double per = x;
+	do
+	{
+		per = x;
+		sch++;
+		fx = x * 2 + cos(x) - 0.5;
+		x = x - ((x - x2) * fx / (fx - fx2));
+	} while (abs(per - x) > e);
+	cout << "Ur num is " << x << "\n Kol-vo oper is " << sch;
 }
 //метод простых итераций
 #include <iostream>
