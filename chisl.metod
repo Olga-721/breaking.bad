@@ -55,21 +55,45 @@ int main()
 using namespace std;
 int main()
 {
-	double x = -1, sch = 0;
-	double x2 = 1, e;
+	double x;
+	int sch = 0;
+	int rer;
+	cout << "Enter the sides of interpreter";double x2, e;
+	cin >> x >> x2;
+	
 	cout << "Enter the tochnost'";
 	cin >> e;
 	double fx = x * 2 + cos(x) - 0.5;
 	double fx2 = x2 * 2 + cos(x2) - 0.5;
 	double per = x;
-	do
-	{
-		per = x;
-		sch++;
-		fx = x * 2 + cos(x) - 0.5;
-		x = x - ((x - x2) * fx / (fx - fx2));
-	} while (abs(per - x) > e);
-	cout << "Ur num is " << x << "\n Kol-vo oper is " << sch;
+	double per2 = x2;
+	double i = x - ((x - x2) * fx / (fx - fx2));
+
+		if (per * i < 0)
+		{
+			do {
+			per = x;
+			sch++;
+			fx = x * 2 + cos(x) - 0.5;
+			x = x - ((x - x2) * fx / (fx - fx2));
+			rer = 1;
+
+			} while (abs(x - per) > e);
+		}
+
+		else
+		{
+			do {per2 = x2;
+			sch++;
+			fx2 = x2 * 2 + cos(x2) - 0.5;
+			x2 = x2 - ((x2 - x) * fx2 / (fx2 - fx));
+			rer = 0;
+			} while (abs(x2 - per2));
+			
+		}
+
+	if (rer==1) cout << "Ur num is " << x << "\n Kol-vo oper is " << sch;
+	else cout << "Ur num is " << x2 << "\n Kol-vo oper is " << sch;
 }
 //метод простых итераций
 #include <iostream>
