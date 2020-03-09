@@ -189,7 +189,7 @@ int main()
 	system("pause");
 	return 0;
 }
-//метод прогонки , ввод коэффициентов а, в, с, д, а1 = 0;
+//метод прогонки , ввод коэффициентов в=-3, с=5, д=0, а1 = 0, ввод кол-ва эл-тов = 4!;
 #include <cmath>
 #include <iomanip>
 #include <iostream>
@@ -207,8 +207,8 @@ int main()
 	double a[30];
 	double c[30];
 	double d[30];
-	cout << "enter the size of matrix "; int n; cin >> n;
-	cout << "enter the koeff b = ";
+	cout << "\t enter the size of matrix "; int n; cin >> n;
+	cout << "\t enter the koeff b = ";
 	cin >> b[1];
 	cout << "\t enter the koeff c = "; cin >> c[1];
 	cout << "\t enter the koeff d = "; cin >> d[1];
@@ -226,11 +226,10 @@ int main()
 		c[j] = pow(-j + 4, j + 4);
 	for (int j = 1; j <= n; j++)
 		d[j] = 4 - j;
-	
+	int i = 1;
 	for (n = n; n > 0; n--)
 	{
-		int i = 0;
-		cout << " Iteration is " << ++i << ", x[" << n << "] = " << func(d[n], a[n], V[n - 1], U[n - 1], b[n])<<"\t";
+		cout << " Iteration is " << i << ", x[" << n << "] = " << func(d[n], a[n], V[n - 1], U[n - 1], b[n]) << "\n"; i++;
 	}
 }
 
