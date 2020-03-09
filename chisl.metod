@@ -113,3 +113,79 @@ cin>>e;
 	cout << x<<"\nKol-vo operations "<<oper;
 
 }
+//ЛАБА2
+//метод простых иетраций системы ур-ий, эпс = 0.001, прибл = 1, итераций 20;
+#include <cmath>
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+double f(double x)
+{
+	return acos(1.5-x);
+}
+
+double g(double x)
+{
+	return (1+sin(x-0.5))/2;
+}
+
+int main()
+{
+	double x;
+	double eps;
+	cout << "Enter initial root value   : "; cin >> x;
+	cout << "Enter eps : "; cin >> eps;
+	for (double iter = 1; eps < fabs(f(x)); iter = iter + 1)
+	{
+		system("cls");
+		cout << "Iteration : " << setprecision(0) << iter << endl;
+		cout << "x    = " << x << endl;
+		cout << "g(x) = " << g(x) << endl;
+		cout << "f(x) = " << f(x) << endl;
+		x = g(x);
+	}
+	return 0;
+}
+//метод ньютона, приближение = 1, эпс = 0.001, итераций 20;
+#include <cmath>
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+double f(double x)
+{
+	return acos(1.5 - x);
+}
+double df(double x)
+{
+	return 1 / (sqrt(1 - (1.5 - x) * (1.5 - x)));
+}
+
+double g(double x)
+{
+	return (1 + sin(x - 0.5)) / 2;
+}
+
+
+int main()
+{
+	double x;
+	double eps;
+	cout << "Enter initial root value   : "; cin >> x;
+	cout << "Enter error of calculation : "; cin >> eps;
+	for (double iter = 1; eps < fabs(f(x)); iter = iter + 1)
+	{
+		system("cls");
+		cout << "Iteration : " << setprecision(0) << iter << endl;
+		if (df(x) == 0)
+			break;//если df(x) == 0, то будет деление на ноль x - f(x)/df(x)
+		cout << "x    = " << x << endl;
+		cout << "g(x) = " << g(x) << endl;
+		cout << "df(x)= " << df(x) << endl;
+		cout << "f(x) = " << f(x) << endl;
+		x = g(x);
+	}
+	system("pause");
+	return 0;
+}
