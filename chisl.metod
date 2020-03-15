@@ -114,38 +114,38 @@ cin>>e;
 
 }
 //ЛАБА2
-//метод простых иетраций системы ур-ий, эпс = 0.001, прибл = 1, итераций 20;
-#include <cmath>
-#include <iomanip>
+//метод простых иетраций системы ур-ий, эпс = 0.001, прибл = 0.2(x),0.5(y) , итераций 11;
 #include <iostream>
 using namespace std;
-
-double f(double x)
+double y(double x)
 {
-	return acos(1.5-x);
+	return (1 + sin(x - 0.5)) / 2;
 }
-
-double g(double x)
+double x(double y)
 {
-	return (1+sin(x-0.5))/2;
+	return 1.5 - cos(y);
 }
-
-int main()
-{
-	double x;
-	double eps;
-	cout << "Enter initial root value   : "; cin >> x;
-	cout << "Enter eps : "; cin >> eps;
-	for (double iter = 1; eps < fabs(f(x)); iter = iter + 1)
+int main() {
+	int n=0;
+	double x1, y1;
+	double first, sec;
+	cout << "enter first priblijenie (x) ";
+	cin >> x1;
+	cout << "\tenter second priblijenie (y) ";
+	cin >> y1;
+	double e;
+	cout << "\tenter the eps "; cin >> e;
+	do
 	{
-		system("cls");
-		cout << "Iteration : " << setprecision(0) << iter << endl;
-		cout << "x    = " << x << endl;
-		cout << "g(x) = " << g(x) << endl;
-		cout << "f(x) = " << f(x) << endl;
-		x = g(x);
-	}
-	return 0;
+		first = x1;
+		sec = y1;
+		x1 = x(x1);
+		y1 = y(y1);
+		n++;
+	} while (abs(x1 - first) > e&& abs(y1 - sec) > e);
+	cout << "\n ur answers are " << x1 << "\t cosy+x=" << cos(y1) + x1;
+	cout << "\n ur answers are " << y1 << "\t 2y-sin(x-0.5)=" << 2 * y1 - sin(x1 - 0.5);
+	cout << "\nKol-vo iterations are " << n;
 }
 //метод ньютона, приближение = 1, эпс = 0.001, итераций 20;
 #include <cmath>
