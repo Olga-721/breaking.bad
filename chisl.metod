@@ -148,46 +148,22 @@ int main() {
 	cout << "\nKol-vo iterations are " << n;
 }
 //метод ньютона, приближение = 1, эпс = 0.001, итераций 20;
-#include <cmath>
-#include <iomanip>
 #include <iostream>
 using namespace std;
+double x1, y1;
+double f1(double x, double y){return cos(y)+x-0.5;}
+double f2(double x, double y){return 2*y - sin(x-0.5)-1;}
+double df1x(double x){return 1;}
+double df2y(double y) { return 2; }
+double df1y(double y) { return -sin(y); }
+double df2x(double x) { return -cos(x-0.5); }
+int main() {
+	double resh1, resh2;
+	double pr1, pr2,g1,h1 ;
+	double 
+	do {
 
-double f(double x)
-{
-	return acos(1.5 - x);
-}
-double df(double x)
-{
-	return 1 / (sqrt(1 - (1.5 - x) * (1.5 - x)));
-}
-
-double g(double x)
-{
-	return (1 + sin(x - 0.5)) / 2;
-}
-
-
-int main()
-{
-	double x;
-	double eps;
-	cout << "Enter initial root value   : "; cin >> x;
-	cout << "Enter error of calculation : "; cin >> eps;
-	for (double iter = 1; eps < fabs(f(x)); iter = iter + 1)
-	{
-		system("cls");
-		cout << "Iteration : " << setprecision(0) << iter << endl;
-		if (df(x) == 0)
-			break;//если df(x) == 0, то будет деление на ноль x - f(x)/df(x)
-		cout << "x    = " << x << endl;
-		cout << "g(x) = " << g(x) << endl;
-		cout << "df(x)= " << df(x) << endl;
-		cout << "f(x) = " << f(x) << endl;
-		x = g(x);
-	}
-	system("pause");
-	return 0;
+	} while ();
 }
 //метод прогонки , ввод коэффициентов в=-3, с=5, д=0, а1 = 0, ввод кол-ва эл-тов = 4!;
 #include <cmath>
